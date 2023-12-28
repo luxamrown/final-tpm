@@ -6,3 +6,21 @@
         padding: 5px 20px 5px 20px;
         width: 100px;
     }
+
+    .whiteBox {
+        background-color: white;
+        margin-left: 100px;
+        margin-right: 110px;
+        width: 1230px;
+        height: 530px;
+    }
+
+    .colLeft {
+        color:black;
+        width:500px;
+        margin-top: 60px;
+        margin-left: 60px;
+        display:flex;
+        align-items:center;
+        font-size: 40px;
+    }
