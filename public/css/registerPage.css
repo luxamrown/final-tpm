@@ -7,6 +7,7 @@ body {
     background-repeat: no-repeat;
     min-height: 100vh;
     position: relative;
+    font-family: Poppins;
 }
 
 h1 {
@@ -16,7 +17,10 @@ h1 {
     font-weight: 700;
     line-height: normal;
     text-align: center;
-    letter-spacing: 4px;
+    letter-spacing: 6px;
+    font-size: 52px;
+    margin-bottom: 0;
+    margin-top: 1rem;
 }
 
 .progress__bar__container {
@@ -26,6 +30,8 @@ h1 {
     width: 75%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .progress__bar__list {
@@ -34,7 +40,7 @@ h1 {
     align-items: center;
     list-style-type: none;
     padding: 0;
-    width: 50%;
+    width: 30%;
     position: relative;
 }
 
@@ -44,13 +50,14 @@ h1 {
     align-items: center;
     width: 20px;
     height: 20px;
+    border: 1px solid #39219D;
     border-radius: 50%;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
     background-color: #FFFFFF;
     color: #39219D;
     transition: all 0.3s ease;
-    padding: 0.5rem;
+    padding: 0.75rem;
 }
 
 .progress__bar__active {
@@ -74,9 +81,10 @@ h1 {
 
 .registration__form {
     background: #FFF;
-    width: 50%;
+    width: 35%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 1rem;
     padding: 2rem;
     border-radius: 10px;
     filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
@@ -91,10 +99,10 @@ h1 {
 
 .registration__form__category__section {
     text-align: center;
-    font-weight: bold;    
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 1rem;
+    font-weight: 600;    
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 1.25rem;
     padding-right: 1rem;
 }
 
@@ -207,10 +215,10 @@ h1 {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    border-radius: 10px;
+    border-radius: 20px;
     color: #F0F0F0;
 }
 
