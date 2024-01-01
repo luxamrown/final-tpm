@@ -6,7 +6,6 @@
     },
     "routes": [
         { "src": "/build/(.*)", "dest": "/public/build/" },
-        { "src": "/resources/(.*)", "dest": "/public/"},
         { "src": "/frames/(.*)", "dest": "/public/frames/"},
         { "src": "/fonts/(.*)", "dest": "/public/fonts/"},
         { "src": "/css/(.*)", "dest": "/public/css/"},
@@ -15,7 +14,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://yourproductionurl.com",
+        "APP_URL": "https://final-tpm.vercel.app",
  
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
