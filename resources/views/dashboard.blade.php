@@ -54,7 +54,7 @@
     <div class="whiteBox border border-light shadow-lg" style="margin-top: 150px;">
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col" style="padding-right: 0px;">
                     <span class="colLeft poppins-bold" style="font-weight: bold; letter-spacing: -3px; margin-top: 60px;"> < / > </span>
                     <span class="colLeft poppins" style="margin-top: 0px; font-size: 30px; font-weight: 450; letter-spacing: 17px; font-size: 25px;">WELCOME</span>
                     <h1 class="colLeft poppins-bold" style="margin-top: 25px; letter-spacing: 13px; font-size: 100px;"><span style="color: #0D0043">HACK</span><span style="color: #2F0CBD">TECH</span></h1>
@@ -64,6 +64,10 @@
                         solutions and make into code.
                     </p>
                     <button type="reset" class="poppins" id="register" style="border: #0D0043; margin-left: 60px; ">Register Here !</button>
+                </div>
+                <div class="col" style="padding-right: 0px; position: relative">
+                  <h3 class="poppins" style="position: absolute; z-index: 1; margin-left: 45px; margin-top: 110px; letter-spacing:3px;">Sponsored by</h3>
+                  <img src="{{asset('frames/Rectangle 2.png')}}" alt="" style="width: 486px; height: 620px; margin-left: 8px; z-index: 0;">
                 </div>
             </div>
             <img src="{{asset('frames/Frame1.png')}}" alt="" style="width: 230px; height: 200px; margin-top: 40px; margin-bottom: 130px; position: absolute; left: 30px;">
