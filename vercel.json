@@ -6,11 +6,10 @@
     },
     "routes": [
         { "src": "/build/assets/(.*)", "dest": "/public/css/" },
-        { "src": "/build/(.*)", "dest": "/public/build/" },
         { "src": "/frames/(.*)", "dest": "/public/frames/"},
         { "src": "/fonts/(.*)", "dest": "/public/fonts/"},
         { "src": "/css/(.*)", "dest": "/public/css/"},
-        { "src": "/(.*)", "dest": "/api/index.php" }
+        { "src": "/(.*)", "dest": "/api/" }
     ],
     "env": {
         "APP_ENV": "production",
