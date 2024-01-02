@@ -7,8 +7,10 @@
     "routes": [
         { "src": "/build/assets/(.*)", "dest": "/public/css/" },
         { "src": "/frames/(.*)", "dest": "/public/frames/"},
+        { "src": "/img/(.*)", "dest": "/public/img/"},
         { "src": "/fonts/(.*)", "dest": "/public/fonts/"},
         { "src": "/css/(.*)", "dest": "/public/css/"},
+        { "src": "/js/(.*)", "dest": "/public/js/"},
         { "src": "/(.*)", "dest": "/api/" }
     ],
     "env": {
