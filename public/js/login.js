@@ -18,7 +18,7 @@ const loginButton = document.getElementById("login-button");
 const loginError = document.getElementById("login-error");
 
 let loginUser;
-loginButton.addEventListener("click", () => {
+loginButton.addEventListener("click", async () => {
     loginUser = DUMMY_USERS.find((u) => {
         return (
             u.groupName === groupName.value.trim() && u.password === password.value.trim()
@@ -30,6 +30,10 @@ loginButton.addEventListener("click", () => {
     if (loginUser) {
         console.log("Successfully login with " + loginUser.groupName);
         loginError.style.display = "none";
+
+        sessionStorage.setItem("loginUser", JSON.stringify(loginUser));
+        location.replace("/dashboard");
+        
         return;
     }
     else {

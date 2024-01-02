@@ -254,8 +254,16 @@ h1 {
 }
 
 @media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+
     .progress__bar__container {
         width: 100%;
+    }
+
+    .progress__bar__list {
+        width: 50%;
     }
 
     .registration__form {

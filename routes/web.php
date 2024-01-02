@@ -24,3 +24,7 @@ Route::get('/register', function () {
 Route::get('/login', function () {
     return view('loginPage');
 });
+
+Route::get('/dashboard', function () {
+    return view('dashboardPage');
+});
