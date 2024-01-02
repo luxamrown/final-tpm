@@ -20,3 +20,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('dashboard');
 });
+
+Route::get('/register', function () {
+    return view('registerPage');
+});
+
+Route::get('/login', function () {
+    return view('loginPage');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboardPage');
+});
