@@ -50,12 +50,21 @@
         src: url('../fonts/Poppins-Bold.ttf')format('truetype');
     }
 
+    @font-face {
+        font-family: 'Poppins-Light';
+        src: url('../fonts/Poppins-ExtraLight.ttf')format('truetype');
+    }
+
     .poppins-bold {
         font-family: 'Poppins-Bold';
     }
 
     .poppins {
         font-family: 'Poppins';
+    }
+
+    .poppins-light {
+        font-family: 'Poppins-Light';
     }
 
     #register {
