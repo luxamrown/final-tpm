@@ -19,8 +19,8 @@ class GroupDataFactory extends Factory
     {
         $fixUsername = $this->faker->userName();
         return [
-                'group_id' => Group::factory()->create()->id - 10,
-                // 'group_id' => $this->faker->unique()->numberBetween(1, Group::count()),
+                // 'group_id' => Group::factory()->create()->id - 10,
+                'group_id' => $this->faker->unique()->numberBetween(1, Group::count()),
                 'fullname' => $this->faker->name(),
                 'email' => $this->faker->email(),
                 'whatsapp' => $this->faker->phoneNumber(),

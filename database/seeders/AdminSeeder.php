@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Group;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -14,7 +15,7 @@ class AdminSeeder extends Seeder
     public function run(): void
     {
         DB::table('group')->insert([
-            'id' => 99,
+            'id' => Group::count() + 1,
             'name' => 'admin',
             'password' => Hash::make('admin123'),
             'is_binusian' => false,
