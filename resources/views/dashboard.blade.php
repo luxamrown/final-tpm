@@ -107,16 +107,20 @@
         </div>
         <img src="{{asset('frames/Ellipse 1.png')}}" style="z-index: 1; position: absolute; right: 0%; width: 750px; height: 600px; bottom: -45%;">
     </div>
-    <div class="background2" style="height: 1000px;">
+    <div class="background2" style="height: 1500px;">
         <h1 class="poppins-bold" style="font-size: 130px; color:black; margin-top: 100px; margin-left: 100px; letter-spacing: 10px;"> JULY <span style="margin-left: 40px; letter-spacing: 0px; !important">28 - 30</span></h1>
         <h1 class="poppins-bold" style="font-size: 130px; color: black; margin-left: 100px; letter-spacing: 10px;">2023</h1>
-        <img src="{{asset('frames/image 2.png')}}" style="width: 830px; height: 550px; position: absolute; right: 5%; bottom: -153%; z-index: 1;">
+        <img src="{{asset('frames/image 2.png')}}" style="width: 830px; height: 550px; position: absolute; right: 5%; bottom: -128%; z-index: 1;">
         <img src="{{asset('frames/Ellipse 3.png')}}" style="position: absolute; left: 0%; width: 900px; height: 600px;">
-        <img src="{{asset('frames/Play button.png')}}" style="position: absolute; left: 23%; width: 165px; hieght: 167px; bottom: -133%;">
-        <div class="poppins" style="position:absolute; left: 6%; bottom: -155%;">
+        <img src="{{asset('frames/Play button.png')}}" style="position: absolute; left: 23%; width: 165px; hieght: 167px; bottom: -107%;">
+        <div class="poppins" style="position:absolute; left: 6%; bottom: -125%;">
             <h1 style="letter-spacing: 13px;  font-size: 70px; color:black;">Play <p style="margin-top: 17px;">Video</p></h1>
             <p class="smallFont poppins-light" style="margin-top: 30px; letter-spacing: 3px">VIDEO RECAP TECHNO</p>
         </div>
+        <img src="{{asset('frames/teamwork.png')}}" style="width: 600px; height: 900px; position: absolute; bottom: -253%; left: 7%;">
+        <img src="{{asset('frames/image 11.png')}}" style="width: 50px; height: 50px; position: absolute; bottom: -148%; left: 53%;">
+        <h1></h1>
+
     </div>
 </body>
 </html>
