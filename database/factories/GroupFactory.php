@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Facades\Hash;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Group>
@@ -18,7 +19,7 @@ class GroupFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
-            'password' => $this->faker->userName(),
+            'password' => Hash::make('hellopassword'),
             'is_binusian' => $this->faker->boolean(),
             'is_admin' => false,
         ];
