@@ -125,28 +125,32 @@
         </div>
         <img src="{{asset('frames/Ellipse 1.png')}}" style="z-index: 1; position: absolute; right: 0%; width: 800px; height: 600px; bottom: -8%;">
     </div>
-    <div class="background2" style="height: 1500px;">
+    <div class="background2" style="height: 1900px;">
         <h1 class="poppins-bold" style="font-size: 130px; color:black; margin-top: 100px; margin-left: 100px; letter-spacing: 10px;"> JULY <span style="margin-left: 40px; letter-spacing: 0px; !important">28 - 30</span></h1>
         <h1 class="poppins-bold" style="font-size: 130px; color: black; margin-left: 100px; letter-spacing: 10px;">2023</h1>
-        <img src="{{asset('frames/image 2.png')}}" style="width: 830px; height: 550px; position: absolute; right: 5%; bottom: 51%; z-index: 1;">
+        <img src="{{asset('frames/image 2.png')}}" style="width: 830px; height: 550px; position: absolute; right: 5%; bottom: 61%; z-index: 1;">
         <img src="{{asset('frames/Ellipse 3.png')}}" style="position: absolute; left: 0%; width: 900px; height: 600px;">
-        <img src="{{asset('frames/Play button.png')}}" style="position: absolute; left: 23%; width: 165px; height: 167px; bottom: 60%;">
-        <div class="poppins" style="position:absolute; left: 6%; bottom: 50%;">
+        <img src="{{asset('frames/Play button.png')}}" style="position: absolute; left: 23%; width: 165px; height: 167px; bottom: 70%;">
+        <div class="poppins" style="position:absolute; left: 6%; bottom: 60%;">
             <h1 style="letter-spacing: 13px;  font-size: 70px; color:black;">Play <p style="margin-top: 17px;">Video</p></h1>
             <p class="smallFont poppins-light" style="margin-top: 30px; letter-spacing: 3px">VIDEO RECAP TECHNO</p>
         </div>
-        <img src="{{asset('frames/teamwork.png')}}" style="width: 600px; height: 900px; position: absolute; bottom: -17%; left: 7%;">
-        <img src="{{asset('frames/image 11.png')}}" style="width: 50px; height: 50px; position: absolute; bottom: 40%; left: 53%;">
-        <div style="position: absolute; bottom: 15%; right: 9%; width: 490px;">
+        <img src="{{asset('frames/teamwork.png')}}" style="width: 600px; height: 900px; position: absolute; bottom: 7%; left: 7%;">
+        <img src="{{asset('frames/image 11.png')}}" style="width: 50px; height: 50px; position: absolute; bottom: 52%; left: 53%;">
+        <div style="position: absolute; bottom: 30%; right: 9%; width: 490px;">
             <h1 class="poppins" style="color:black; text-align:center; line-height: 1.5; font-weight: bold; margin-bottom: 30px;">
                 Don't wait ! Do something when you are young, when you have nothing to lose, and
                 keep that in mind
             </h1>
             <h3 class="poppins-light" style="color: black; text-align:center; font-style: italic;">- Steve Jobs</h3>
         </div>
-        <img src="{{asset('frames/image 12.png')}}" style="width: 50px; height: 50px; position: absolute; bottom: 10%; left: 90%;">
-        <img src="{{asset('frames/Ellipse 4.png')}}" style="position:absolute; bottom: -30%; right: 0%; height: 500px;">
-        <img src="{{asset('frames/Frame 28.png')}}" style="position:absolute; bottom: -30%; right: 0%; height: 490px;">
+        <img src="{{asset('frames/image 12.png')}}" style="width: 50px; height: 50px; position: absolute; bottom: 27%; left: 90%;">
+        <img src="{{asset('frames/Ellipse 4.png')}}" style="position:absolute; bottom: -5%; right: 0%; height: 500px;">
+        <img src="{{asset('frames/Frame 28.png')}}" style="position:absolute; bottom: -5%; right: 0%; height: 490px;">
+        <img src="{{asset('frames/codeTag.png')}}" style="position:absolute; bottom: 5%; right: 0%; height: 90px; width: 115px;">
+        <h1 class="poppins-bold" style="color: black; position: absolute; bottom: -5%; left: 25%; font-size: 130px;">ABOUT US</h1>
+        <img src="{{asset('frames/codingPic.png')}}" style="position: absolute; height: 600px; width: 1000px; bottom: -40%; left: 15%;">
+
     </div>
 </body>
 </html>
