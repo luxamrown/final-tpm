@@ -92,14 +92,15 @@ class PanelController extends Controller
             $responseMessage = "Team Gagal Dihapus";
             $devMessage = "Delete Team Failed";
         }
-
-        if($groupdata->group_id){
-            try {
-                Group::destroy($groupdata->group_id);
-            } catch (\Throwable $th) {
-                $success = false;
-                $responseMessage = "Team Gagal Dihapus";
-                $devMessage = "Delete Team Failed";
+        if($success){
+            if($groupdata->group_id){
+                try {
+                    Group::destroy($groupdata->group_id);
+                } catch (\Throwable $th) {
+                    $success = false;
+                    $responseMessage = "Team Gagal Dihapus";
+                    $devMessage = "Delete Team Failed";
+                }
             }
         }
 
