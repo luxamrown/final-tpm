@@ -33,14 +33,17 @@ class RegisterController extends Controller
     }
 
     public function register(Request $request){
-        $responseMessage = "Save File and Save Data Success";
+        $success = true;
+        $responseMessage = "Berhasil Register Silahkan Login"; 
+        $devMessage = "Register and Input Data Succes";
 
-        $newGroupId = RegisterController::registerGroup($request->name, $request->password, $request->is_binusian);
+        $newGroup = RegisterController::registerGroup($request->name, $request->password, $request->is_binusian);
         
         list($fileCv, $typeFileCv, $fileNameCv) = RegisterController::parseUriFile($request->fileCv, $request->name . "cv");
         try {
-            file_put_contents('storage/file/'. "$fileNameCv" . "." . $typeFileCv, $fileCv);
+            file_put_contents('storage/file/'. $fileNameCv . "." . $typeFileCv, $fileCv);
         } catch (\Throwable $th) {
+            $success = false;
             $responseMessage = "Error when save file";
         }
 
@@ -48,23 +51,24 @@ class RegisterController extends Controller
             list($fileFlazz, $typeFileFlazz, $fileNameFlazz) = RegisterController::parseUriFile($request->fileFlazz, $request->name . "flazz");
             
             try {
-                file_put_contents('storage/file/'. "$fileNameFlazz" . "." . $typeFileFlazz, $fileFlazz);
+                file_put_contents('storage/file/'. $fileNameFlazz . "." . $typeFileFlazz, $fileFlazz);
             } catch (\Throwable $th) {
+                $success = false;
                 $responseMessage = "Error when save file";
             }
         } else {
             list($fileId, $typeFileId, $fileNameId) = RegisterController::parseUriFile($request->fileId, $request->name . "id");
 
             try {
-                file_put_contents('storage/file/'. "$fileId" . "." . $typeFileId, $fileNameId);
+                file_put_contents('storage/file/'. $fileId . "." . $typeFileId, $fileNameId);
             } catch (\Throwable $th) {
+                $success = false;
                 $responseMessage = "Error when save file";
             }
-            
         }
 
-        GroupData::create([
-            'group_id'=> $newGroupId,
+        $newGroupData = GroupData::create([
+            'group_id'=> $newGroup,
             'fullname'=> $request->fullname,
             'email'=> $request->email,
             'whatsapp'=> $request->whatsapp,
@@ -72,16 +76,20 @@ class RegisterController extends Controller
             'github'=> $request->github,
             'birthplace'=> $request->birthplace,
             'birthdate'=> $request->birthdate,
-            'cv_file'=> $fileNameCv . $typeFileCv,
-            'flazz_file' => $request->is_binusian ? $fileNameFlazz . $typeFileFlazz : "",
-            'idcard_file' => $request->is_binusian ? "" : $fileNameId . $typeFileId,
+            'cv_file'=> $fileNameCv . "." . $typeFileCv,
+            'flazz_file' => $request->is_binusian ? $fileNameFlazz . "." . $typeFileFlazz : "",
+            'idcard_file' => $request->is_binusian ? "" : $fileNameId . "." . $typeFileId,
             'regist_date'=> $request->regist_date
         ]);
 
         return response([
-            "status" => "OK",
-            "devMessage"=> $responseMessage,
-            "message" => "Register Berhasil"
+            "success" => $success,
+            "devMessage"=> $devMessage,
+            "data" => [
+                "id" => $newGroup,
+                "group_id"=> $newGroupData->id
+            ],
+            "message" =>  $responseMessage
         ]);
     }
 }
