@@ -1,6 +1,7 @@
 
     body {
         height: 800px;
+        overflow-x: hidden;
     }
 
     #loginButton {
@@ -80,5 +81,25 @@
 
     .thin {
         font-weight: 100;
+    }
+
+    @keyframes moveLeft1 {
+        0% { transform: translateX(0%); }
+        100% { transform: translateX(-100%); }
+    }
+
+    .moving-image1 {
+        position: absolute;
+        animation: moveLeft1 15s linear infinite;
+    }
+
+    @keyframes moveLeft2 {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(0%); }
+    }
+
+    .moving-image2 {
+        position: absolute;
+        animation: moveLeft2 15s linear infinite;
     }
 

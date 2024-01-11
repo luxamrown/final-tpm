@@ -7,8 +7,23 @@
         background-color: white;
     }
 
+    .gradient {
+        background: linear-gradient(to right, #2F0CBD, #0D0043);
+    }
+
     .gap {
         margin-right: 20px;
+    }
+
+    .gradient-button1 {
+        width: 240px;
+        color: white;
+        border:#0D0043;
+        border-radius: 35px;
+        position: absolute;
+        bottom: -65%;
+        padding: 10px 40px 10px 40px;
+        font-size: 30px;
     }
 
     .smallFont {
@@ -20,6 +35,13 @@
         margin-bottom: 0px;
         letter-spacing: 3px;
     }
+
+    .center-element {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
 
     .background1, .background2 {
             position: relative;
@@ -149,7 +171,19 @@
         <img src="{{asset('frames/Frame 28.png')}}" style="position:absolute; bottom: -5%; right: 0%; height: 490px;">
         <img src="{{asset('frames/codeTag.png')}}" style="position:absolute; bottom: 5%; right: 0%; height: 90px; width: 115px;">
         <h1 class="poppins-bold" style="color: black; position: absolute; bottom: -5%; left: 25%; font-size: 130px;">ABOUT US</h1>
-        <img src="{{asset('frames/codingPic.png')}}" style="position: absolute; height: 600px; width: 1000px; bottom: -40%; left: 15%;">
+        <img src="{{asset('frames/codingPic.png')}}" style="position: absolute; height: 600px; width: 1000px; bottom: -40%; left: 14%;">
+        <h1 class="poppins" style="position: absolute; bottom: -70%; left: 14%; height: 500px; width: 1000px; color: black; text-align: center; font-size: 23px; line-height: 1.7;">
+            Hackathon adalah sebuah acara kolaboratif dan intensif di mana individu atau tim bekerja bersama dalam waktu terbatas, seringkali 48 jam,
+            untuk menyelesaikan tantangan atau menciptakan solusi inovatif,
+            khususnya di bidang teknologi dan pengembangan perangkat lunak.
+            Peserta biasanya bersaing untuk membuat aplikasi atau proyek yang dapat mengatasi masalah tertentu,
+            dan acara ini juga dapat mencakup sesi mentoring dari para ahli di berbagai bidang.
+            Hackathon terdiri dari tiga bidang, yaitu bisnis, teknologi, dan design.
+        </h1>
+        <button class="poppins gradient center-element gradient-button1" style="left: 40%;">Register</button>
+        <button class="poppins gradient center-element gradient-button1" style="left: 60%">Guidebook</button>
+        <img class="moving-image1" src="{{asset('frames/Frame 13.png')}}" style="bottom: -83%; width: 3000px;">
+        <img class="moving-image2" src="{{asset('frames/Frame 13.png')}}" style="bottom: -83%; width: 3000px;">
 
     </div>
 </body>
