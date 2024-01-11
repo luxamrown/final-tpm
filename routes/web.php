@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PanelController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +20,8 @@ Route::get('/', function () {
 });
 
 Route::POST('/register', [RegisterController::class, 'register'])->name('register');
+
+Route::GET('/adminpanel', [PanelController::class, 'getListTeam'])->name('getListTeam');
+Route::POST('/adminpanel', [PanelController::class, 'getDetailTeam'])->name('getDetailTeam');
+Route::PUT('/adminpanel', [PanelController::class, 'updateTeam'])->name('updateTeam');
+Route::DELETE('/adminpanel', [PanelController::class, 'deleteTeam'])->name('deleteTeam');
