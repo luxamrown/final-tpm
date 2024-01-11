@@ -23,9 +23,9 @@ return new class extends Migration
             $table->string('github');
             $table->string('birthplace');
             $table->string('birthdate');
-            $table->string('cv_file');
-            $table->string('flazz_file');
-            $table->string('idcard_file');
+            $table->string('cv_file')->default('');;
+            $table->string('flazz_file')->default('');;
+            $table->string('idcard_file')->default('');;
             $table->string('regist_date');
 
             $table->timestamps();
