@@ -182,9 +182,24 @@
         </h1>
         <button class="poppins gradient center-element gradient-button1" style="left: 40%;">Register</button>
         <button class="poppins gradient center-element gradient-button1" style="left: 60%">Guidebook</button>
-        <img class="moving-image1" src="{{asset('frames/Frame 13.png')}}" style="bottom: -83%; width: 3000px;">
-        <img class="moving-image2" src="{{asset('frames/Frame 13.png')}}" style="bottom: -83%; width: 3000px;">
 
+        <div>
+            <img class="moving-image1" src="{{asset('frames/Frame 13.png')}}" style="bottom: -83%; width: 3000px;">
+            <img class="moving-image2" src="{{asset('frames/Frame 13.png')}}" style="bottom: -83%; width: 3000px;">
+        </div>
+
+
+        <div class="background1" style="position: absolute; bottom: -130%; height: 900px; width: 100vw;">
+                <div style="position: absolute; left: 10%; width: 86%; bottom: 20%;">
+                    <img src="{{asset('frames/Rectangle 9.png')}}" style="width: 1150px; height: 550px; z-index: 0;">
+                </div>
+                <div style="position: absolute; left: 69.3%; bottom: 21.7%">
+                    <img src="{{asset('frames/Rectangle 11.png')}}" style="width: 275px; height: 535px; z-index: 1;">
+                </div>
+                <div style="position: absolute; bottom: 48%; left: 17%;">
+                    <img src="{{asset('frames/TOTAL.png')}}" style="width: 530px; height: 130px;">
+                </div>
+        </div>
     </div>
 </body>
 </html>
