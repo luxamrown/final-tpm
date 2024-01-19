@@ -193,12 +193,50 @@
                 <div style="position: absolute; left: 10%; width: 86%; bottom: 20%;">
                     <img src="{{asset('frames/Rectangle 9.png')}}" style="width: 1150px; height: 550px; z-index: 0;">
                 </div>
-                <div style="position: absolute; left: 69.3%; bottom: 21.7%">
+                <div style="position: absolute; left: 71.3%; bottom: 21.7%">
                     <img src="{{asset('frames/Rectangle 11.png')}}" style="width: 275px; height: 535px; z-index: 1;">
                 </div>
                 <div style="position: absolute; bottom: 48%; left: 17%;">
-                    <img src="{{asset('frames/TOTAL.png')}}" style="width: 530px; height: 130px;">
+                    <img src="{{asset('frames/TOTAL.png')}}" style="width: 550px; height: 130px;">
                 </div>
+                <h1 class="poppins-bold" style="position: absolute; bottom: 49%; left: 17%; font-size: 65px; letter-spacing:2.5px;">Prizes.</h1>
+                <h1 class="poppins-bold" style="position: absolute; bottom: 34%; left: 17%; font-size: 90px; color:red;">
+                    RP 9.000.000
+                </h1>
+                <div style="position: absolute; bottom: 37%; left: 61%;">
+                    <img src="{{asset('frames/prize.png')}}" style="width: 330px; height: 270px;">
+                </div>
+
+                    <div style="position: absolute; bottom: 73.3%; left: 12.6%;">
+                        <img src="{{asset('frames/blackBox.png')}}" style="width: 35px; height: 35px;">
+                    </div>
+                    <div style="position: absolute; bottom: 27.2%; left: 12.6%">
+                        <img src="{{asset('frames/blackBox.png')}}" style="width: 35px; height: 35px;">
+                    </div>
+
+                    <div style="position: absolute; bottom: 31%; left: 11.1%">
+                        <img src="{{asset('frames/verticalLine.png')}}">
+                    </div>
+                    <div style="position: absolute; bottom: 31%; right: 11.1%;">
+                        <img src="{{asset('frames/verticalLine.png')}}">
+                    </div>
+
+
+                    <div style="position: absolute; bottom: 78.5%; left: 15%;">
+                        <img src="{{asset('frames/horizontalLine.png')}}">
+                    </div>
+                    <div style="position: absolute; bottom: 24.5%; left: 15%;">
+                        <img src="{{asset('frames/horizontalLine.png')}}">
+                    </div>
+
+                    <div style="position: absolute; bottom: 73.2%; right: 12.3%;">
+                        <img src="{{asset('frames/whiteBox.png')}}" style="width: 35px; height: 35px;">
+                    </div>
+                    <div style="position: absolute; bottom: 26%; right: 12.35%;">
+                        <img src="{{asset('frames/whiteBox.png')}}" style="width: 35px; height: 35px;">
+                    </div>
+
+
         </div>
     </div>
 </body>
