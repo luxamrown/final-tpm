@@ -19,12 +19,13 @@ class SendMail extends Mailable
 
     // public $request;
     public $data;
+    public $subjectnjir;
 
 
     public function __construct($data)
     {
-
-
+        $this->subject($data['subject']);
+        // $this->subjectnjir = $data['subject'];
         $this->data = $data;
     }
 
@@ -32,12 +33,12 @@ class SendMail extends Mailable
      * Get the message envelope.
      */
 
-    public function envelope(): Envelope
-    {
-        return new Envelope(
-            subject: 'New Message',
-        );
-    }
+    // public function envelope(): Envelope
+    // {
+    //     return new Envelope(
+    //         subject: 'New Message',
+    //     );
+    // }
 
     /**
      * Get the message content definition.
@@ -47,7 +48,12 @@ class SendMail extends Mailable
         return new Content(
             view: 'mail',
         );
-    }
+    }    
+    
+    // public function build()
+    // {
+    //     return $this->subject($this->subjectnjir);
+    // }
 
     /**
      * Get the attachments for the message.
