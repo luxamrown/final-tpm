@@ -10,8 +10,8 @@ class Group extends Model implements Authenticatable
 
 {
     use HasFactory;
-    public $table = "group";
     use AuthenticatableTrait;
+    public $table = "group";
     
     protected $fillable = [
         'name', 'password', 'is_binusian', 'is_admin'
