@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PanelController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,3 +26,4 @@ Route::GET('/adminpanel', [PanelController::class, 'getListTeam'])->name('getLis
 Route::POST('/adminpanel', [PanelController::class, 'getDetailTeam'])->name('getDetailTeam');
 Route::PUT('/adminpanel', [PanelController::class, 'updateTeam'])->name('updateTeam');
 Route::DELETE('/adminpanel', [PanelController::class, 'deleteTeam'])->name('deleteTeam');
+Route::post('/send-mail', [MailController::class, 'sendMail' ])-> name('sendMail');
