@@ -184,60 +184,103 @@
         <button class="poppins gradient center-element gradient-button1" style="left: 60%">Guidebook</button>
 
         <div>
-            <img class="moving-image1" src="{{asset('frames/Frame 13.png')}}" style="bottom: -83%; width: 3000px;">
-            <img class="moving-image2" src="{{asset('frames/Frame 13.png')}}" style="bottom: -83%; width: 3000px;">
+            <img class="moving-image1" src="{{asset('frames/Frame 13.png')}}" style="bottom: -83%; width: 3000px; z-index: 1;">
+            <img class="moving-image2" src="{{asset('frames/Frame 13.png')}}" style="bottom: -83%; width: 3000px; z-index: 1;">
         </div>
 
 
-        <div class="background1" style="position: absolute; bottom: -130%; height: 900px; width: 100vw;">
-                <div style="position: absolute; left: 10%; width: 86%; bottom: 20%;">
-                    <img src="{{asset('frames/Rectangle 9.png')}}" style="width: 1150px; height: 550px; z-index: 0;">
-                </div>
-                <div style="position: absolute; left: 71.3%; bottom: 21.7%">
-                    <img src="{{asset('frames/Rectangle 11.png')}}" style="width: 275px; height: 535px; z-index: 1;">
-                </div>
-                <div style="position: absolute; bottom: 48%; left: 17%;">
-                    <img src="{{asset('frames/TOTAL.png')}}" style="width: 550px; height: 130px;">
-                </div>
-                <h1 class="poppins-bold" style="position: absolute; bottom: 49%; left: 17%; font-size: 65px; letter-spacing:2.5px;">Prizes.</h1>
-                <h1 class="poppins-bold" style="position: absolute; bottom: 34%; left: 17%; font-size: 90px; color:red;">
-                    RP 9.000.000
-                </h1>
-                <div style="position: absolute; bottom: 37%; left: 61%;">
-                    <img src="{{asset('frames/prize.png')}}" style="width: 330px; height: 270px;">
-                </div>
+        <div style="position: relative; bottom: -180%; width: 100vw; min-height: 855px;">
+            <img src="{{asset('frames/Rectangle 10.png')}}" style="position: absolute; width: 100vw; bottom: -80%;">
+            <div style="position: absolute; left: 10%; width: 86%; bottom: 20%;">
+                <img src="{{asset('frames/Rectangle 9.png')}}" style="width: 1150px; height: 550px; z-index: 0;">
+            </div>
+            <div style="position: absolute; left: 71.3%; bottom: 21.7%">
+                <img src="{{asset('frames/Rectangle 11.png')}}" style="width: 275px; height: 535px; z-index: 1;">
+            </div>
+            <div style="position: absolute; bottom: 48%; left: 17%;">
+                <img src="{{asset('frames/TOTAL.png')}}" style="width: 550px; height: 130px;">
+            </div>
+            <h1 class="poppins-bold" style="position: absolute; bottom: 49%; left: 17%; font-size: 65px; letter-spacing:2.5px;">Prizes.</h1>
+            <h1 class="poppins-bold" style="position: absolute; bottom: 34%; left: 17%; font-size: 90px; color:red;">
+                RP 9.000.000
+            </h1>
+            <div style="position: absolute; bottom: 37%; left: 61%;">
+                <img src="{{asset('frames/prize.png')}}" style="width: 330px; height: 270px;">
+            </div>
 
-                    <div style="position: absolute; bottom: 73.3%; left: 12.6%;">
-                        <img src="{{asset('frames/blackBox.png')}}" style="width: 35px; height: 35px;">
-                    </div>
-                    <div style="position: absolute; bottom: 27.2%; left: 12.6%">
-                        <img src="{{asset('frames/blackBox.png')}}" style="width: 35px; height: 35px;">
-                    </div>
+            <div style="position: absolute; bottom: 75.9%; left: 12.6%;">
+                <img src="{{asset('frames/blackBox.png')}}" style="width: 35px; height: 35px;">
+            </div>
+            <div style="position: absolute; bottom: 27.5%; left: 12.6%">
+                <img src="{{asset('frames/blackBox.png')}}" style="width: 35px; height: 35px;">
+            </div>
 
-                    <div style="position: absolute; bottom: 31%; left: 11.1%">
-                        <img src="{{asset('frames/verticalLine.png')}}">
-                    </div>
-                    <div style="position: absolute; bottom: 31%; right: 11.1%;">
-                        <img src="{{asset('frames/verticalLine.png')}}">
-                    </div>
+            <div style="position: absolute; bottom: 31%; left: 11.1%">
+                <img src="{{asset('frames/verticalLine.png')}}" style="height: 385px;">
+            </div>
+            <div style="position: absolute; bottom: 31%; right: 11.1%;">
+                <img src="{{asset('frames/verticalLine.png')}}">
+            </div>
 
 
-                    <div style="position: absolute; bottom: 78.5%; left: 15%;">
-                        <img src="{{asset('frames/horizontalLine.png')}}">
-                    </div>
-                    <div style="position: absolute; bottom: 24.5%; left: 15%;">
-                        <img src="{{asset('frames/horizontalLine.png')}}">
-                    </div>
+            <div style="position: absolute; bottom: 81.5%; left: 15%;">
+                <img src="{{asset('frames/horizontalLine.png')}}">
+            </div>
+            <div style="position: absolute; bottom: 24.5%; left: 15%;">
+                <img src="{{asset('frames/horizontalLine.png')}}">
+            </div>
 
-                    <div style="position: absolute; bottom: 73.2%; right: 12.3%;">
-                        <img src="{{asset('frames/whiteBox.png')}}" style="width: 35px; height: 35px;">
-                    </div>
-                    <div style="position: absolute; bottom: 26%; right: 12.35%;">
-                        <img src="{{asset('frames/whiteBox.png')}}" style="width: 35px; height: 35px;">
-                    </div>
+            <div style="position: absolute; bottom: 75.85%; right: 12.3%;">
+                <img src="{{asset('frames/whiteBox.png')}}" style="width: 35px; height: 35px;">
+            </div>
+            <div style="position: absolute; bottom: 26%; right: 12.35%;">
+                <img src="{{asset('frames/whiteBox.png')}}" style="width: 35px; height: 35px;">
+            </div>
 
+            {{-- prize --}}
+            <div style="position: absolute; bottom: -22%; left: 15%;">
+                <img src="{{asset('frames/2ND.png')}}" style="heigth: 120px; width: 280px; z-index: 0;">
+            </div>
+            <div style="position: absolute; bottom: -17%; left: 40%;">
+                <img src="{{asset('frames/1ST.png')}}" style="height: 180px; width: 330px;">
+            </div>
+            <div style="position: absolute; bottom: -22%; left: 67%;">
+                <img src="{{asset('frames/3RD.png')}}" style="height: 120px; width: 280px;">
+            </div>
+            {{-- prize END --}}
+
+            {{-- trophy --}}
+            <div style="position: absolute; bottom: -45%; left: 16%;">
+                <img src="{{asset('frames/silver.png')}}" style="height: 230px;">
+            </div>
+            <div style="position: absolute; bottom: -50%; left: 39%;">
+                <img src="{{asset('frames/gold.png')}}" style="height: 330px; width: 320px;">
+            </div>
+
+            <div style="position: absolute; bottom: -49%; left: 39%;">
+                <img src="{{asset('frames/star 1.png')}}" style="height: 60px;">
+            </div>
+            <div style="position: absolute; bottom: -49%; left: 57%;">
+                <img src="{{asset('frames/star 2.png')}}" style="height: 60px;">
+            </div>
+            <div style="position: absolute; bottom: -43%; left: 69%;">
+                <img src="{{asset('frames/bronze.png')}}" style="height: 230px;">
+            </div>
+            {{-- trophy END --}}
+
+            {{-- desc prize --}}
+            <div style="position: absolute; left: 15%; bottom: -75%;">
+                <img src="{{asset('frames/2ndPrize.png')}}" style="width: 280; height: 170px;">
+            </div>
+            <div style="position: absolute; left: 42%; bottom: -75%;">
+                <img src="{{asset('frames/1stPrize.png')}}" style="width: 280; height: 170px;">
+            </div>
+            <div style="position: absolute; left: 70%; bottom: -75%;">
+                <img src="{{asset('frames/3rdPrize.png')}}" style="width: 280; height: 170px;">
+            </div>
 
         </div>
     </div>
 </body>
 </html>
+
