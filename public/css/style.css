@@ -1,6 +1,7 @@
 
     body {
         height: 800px;
+        overflow-x: hidden;
     }
 
     #loginButton {
@@ -50,12 +51,21 @@
         src: url('../fonts/Poppins-Bold.ttf')format('truetype');
     }
 
+    @font-face {
+        font-family: 'Poppins-Light';
+        src: url('../fonts/Poppins-ExtraLight.ttf')format('truetype');
+    }
+
     .poppins-bold {
         font-family: 'Poppins-Bold';
     }
 
     .poppins {
         font-family: 'Poppins';
+    }
+
+    .poppins-light {
+        font-family: 'Poppins-Light';
     }
 
     #register {
@@ -67,5 +77,29 @@
         color: white;
         font-size: 35px;
         box-shadow: 0px 20px 10px rgba(13, 0, 67, 0.5);
+    }
+
+    .thin {
+        font-weight: 100;
+    }
+
+    @keyframes moveLeft1 {
+        0% { transform: translateX(0%); }
+        100% { transform: translateX(-100%); }
+    }
+
+    .moving-image1 {
+        position: absolute;
+        animation: moveLeft1 15s linear infinite;
+    }
+
+    @keyframes moveLeft2 {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(0%); }
+    }
+
+    .moving-image2 {
+        position: absolute;
+        animation: moveLeft2 15s linear infinite;
     }
 
