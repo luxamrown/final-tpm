@@ -10,6 +10,9 @@
     .gradient {
         background: linear-gradient(to right, #2F0CBD, #0D0043);
     }
+    .gradient2 {
+        background: linear-gradient(to right, #0D0043, #2F0CBD);
+    }
 
     .gap {
         margin-right: 20px;
@@ -24,6 +27,12 @@
         bottom: -65%;
         padding: 10px 40px 10px 40px;
         font-size: 30px;
+    }
+    .gradient-button2 {
+        color: white;
+        border:#0D0043;
+        border-radius: 35px;
+        padding: 10px 20px 10px 20px;
     }
 
     .smallFont {
@@ -278,9 +287,31 @@
             <div style="position: absolute; left: 70%; bottom: -75%;">
                 <img src="{{asset('frames/3rdPrize.png')}}" style="width: 280; height: 170px;">
             </div>
-
         </div>
+
+        <img src="{{asset('frames/_.png')}}" style="position:absolute; right: 7%; width: 323px; height: 478px; z-index: 0; bottom: -197%;">
+        <h1 class="poppins-bold" style="font-size: 150px; z-index: 1; position:absolute; left: 23%; bottom: -185%;">
+            <span style="color:#2F0CBD">WHY</span>
+            <span style="color:#BC87FF">YOU</span>
+        </h1>
+        <p class="poppins-bold" style="font-size: 150px; z-index: 1; position:absolute; left: 13%; bottom: -197%;">
+            <span style="color:#BC87FF">SHOULD</span>
+            <span style="color:#2F0CBD">JOIN<span style="color:#BC87FF">?</span></span>
+        </p>
+        <img src="{{asset('frames/_ (1).png')}}" style="position: absolute; left: 0%; bottom: -250%; width: 603px; height: 1378px; z-index: 0;">
+        <img src="{{asset('frames/photos.png')}}" style="position: absolute; bottom: -240%; left: 5%; width: 1300px; height: 800px; z-index: 1;">
+        <img src="{{asset('frames/_ 2.png')}}" style="position: absolute; bottom: -305%; right: 0%; z-index: 0;">
+        <h1 class="poppins-bold" style="letter-spacing: -4px; color: black; position:absolute; bottom: -258%; left: 5%; font-size: 50px;">< / ></h1>
+        <h1 class="poppins-bold" style="color: black; position:absolute; bottom: -263%; left: 5%; font-size: 58px;">
+            Frequently Asked Questions
+        </h1>
+
+        <p class="poppins-light" style="font-size: 28px; color:black; position:absolute; bottom: -270%; left: 5.5%;">Need answers? We got you ;)</p>
+        <p class="poppins-light" style="font-size: 28px; color:black; position:absolute; bottom: -273%; left: 5.5%;">Can't find your questions? Don't hesitate to contact us</p>
+        <button type="reset" class="gradient2 gradient-button2 poppins-light" style="position:absolute; bottom: -277%; width: 205px; font-size: 20px; left: 5%;">Ask a Question</button>
     </div>
 </body>
 </html>
+
+
 
