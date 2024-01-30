@@ -69,6 +69,33 @@
             }
         }
 
+        .faq {
+            width: 1200px;
+            height: 90px;
+            padding: 25px 40px 5px 30px;
+            background-color: #FFF;
+            border: #FFF;
+            border-radius: 30px;
+            text-align: left;
+            font-family: 'poppins';
+            font-size: 25px;
+            position: absolute;
+            left: 5%;
+        }
+
+        .icon {
+            position: absolute;
+            right: 4.2%;
+            top: 35%;
+            color: black;
+            border: none;
+            background-color: transparent;
+        }
+
+        .contact1 {
+
+        }
+
 </style>
 
 <!DOCTYPE html>
@@ -79,6 +106,7 @@
     <title>HACKTECH</title>
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
     <div class="background1" style="height: 855px;">
@@ -278,13 +306,13 @@
             {{-- trophy END --}}
 
             {{-- desc prize --}}
-            <div style="position: absolute; left: 15%; bottom: -75%;">
+            <div style="position: absolute; left: 14%; bottom: -75%;">
                 <img src="{{asset('frames/2ndPrize.png')}}" style="width: 280; height: 170px;">
             </div>
-            <div style="position: absolute; left: 42%; bottom: -75%;">
+            <div style="position: absolute; left: 40.5%; bottom: -75%;">
                 <img src="{{asset('frames/1stPrize.png')}}" style="width: 280; height: 170px;">
             </div>
-            <div style="position: absolute; left: 70%; bottom: -75%;">
+            <div style="position: absolute; left: 68.5%; bottom: -75%;">
                 <img src="{{asset('frames/3rdPrize.png')}}" style="width: 280; height: 170px;">
             </div>
         </div>
@@ -309,6 +337,23 @@
         <p class="poppins-light" style="font-size: 28px; color:black; position:absolute; bottom: -270%; left: 5.5%;">Need answers? We got you ;)</p>
         <p class="poppins-light" style="font-size: 28px; color:black; position:absolute; bottom: -273%; left: 5.5%;">Can't find your questions? Don't hesitate to contact us</p>
         <button type="reset" class="gradient2 gradient-button2 poppins-light" style="position:absolute; bottom: -277%; width: 205px; font-size: 20px; left: 5%;">Ask a Question</button>
+
+        <img src="{{asset('frames/background3.png')}}" style="position: absolute; bottom: -385%; z-index: 0;">
+        <p class="faq" style="bottom: -291%; z-index: 1;">Apa saja persyaratan untuk berpartisipasi di Hacktech?<button type="reset" class="icon"><span class="bi bi-chevron-down"></span></button></p>
+        <p class="faq" style="bottom: -298.5%; z-index: 1;">Apakah Hacktech gratis?<button type="reset" class="icon"><span class="bi bi-chevron-down"></span></button></p>
+        <p class="faq" style="bottom: -306%; z-index: 1;">Kapan deadline pendaftaran?<button type="reset" class="icon"><span class="bi bi-chevron-down"></span></button></p>
+        <p class="faq" style="bottom: -313.5%; z-index: 1;">Bisakah saya bergabung dengan lebih dari satu tim?<button type="reset" class="icon"><span class="bi bi-chevron-down"></span></button></p>
+        <p class="faq" style="bottom: -321%; z-index: 1;">Jika saya tidak memiliki basic, bisakah ikut berpartisipasi?<button type="reset" class="icon"><span class="bi bi-chevron-down"></span></button></p>
+        <p class="faq" style="bottom: -330%; z-index: 1; height: 120px;">Bagaimana jika para peserta sudah menyiapkan dan menggunakan source<br>code sebelum acara dimulai?<button type="reset" class="icon" style="top: 39.5% !important;"><span class="bi bi-chevron-down"></span></button></p>
+        <p class="faq" style="bottom: -339%; z-index: 1; height: 120px;">Jika saya tidak lolos seleksi untuk Hacktech, bagaimana dengan biaya<br>pendaftaran saya? Dan bagaimana jika lolos tetapi tidak ingin melanjutkan?<button type="reset" class="icon" style="margin-left: 40px; top: 39.5% !important;"><span class="bi bi-chevron-down"></span></button></p>
+
+        <img src="{{asset('frames/contactUs.png')}}" style="position: absolute; bottom: -384%; width: 102px; height: 786px;">
+        <img src="{{asset('frames/backgroundFAQ.png')}}" style="position:absolute; bottom: -384.5%; right: 0%; width: 1246px; height: 790px; z-index: 0;">
+        <img src="{{asset('frames/purpleBlur.png')}}" style="position:absolute; bottom: -383.3%; right: 0%; width: 1246px; height: 768px;">
+
+        <h1 class="poppins-light" style="color: white; font-size: 64px; position:absolute; bottom: -352%; left: 28%; z-index: 1;">Have a Different Question?</h1>
+        <p class="poppins-light" style="color: white; font-size: 24px; position:absolute; bottom: -357%; left: 49.7%; z-index: 2;">Email us anytime</p>
+        <p class="poppins-bold" style="color: white; letter-spacing: 3px; font-size: 30px; position:absolute; bottom: -359.3%; left: 44.3%; z-index: 2;">Or call - 081 234 5678</p>
     </div>
 </body>
 </html>
