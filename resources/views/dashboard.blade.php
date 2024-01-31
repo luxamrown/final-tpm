@@ -92,8 +92,18 @@
             background-color: transparent;
         }
 
-        .contact1 {
+        .contactForm {
+            width: 383px;
+            height: 46px;
+            background-color: white;
+            border-color: white;
+            border-radius: 10px;
+            border: none;
+        }
 
+        ::placeholder {
+            color: black;
+            font-family: 'Poppins';
         }
 
 </style>
@@ -348,15 +358,30 @@
         <p class="faq" style="bottom: -339%; z-index: 1; height: 120px;">Jika saya tidak lolos seleksi untuk Hacktech, bagaimana dengan biaya<br>pendaftaran saya? Dan bagaimana jika lolos tetapi tidak ingin melanjutkan?<button type="reset" class="icon" style="margin-left: 40px; top: 39.5% !important;"><span class="bi bi-chevron-down"></span></button></p>
 
         <img src="{{asset('frames/contactUs.png')}}" style="position: absolute; bottom: -384%; width: 102px; height: 786px;">
-        <img src="{{asset('frames/backgroundFAQ.png')}}" style="position:absolute; bottom: -384.5%; right: 0%; width: 1246px; height: 790px; z-index: 0;">
-        <img src="{{asset('frames/purpleBlur.png')}}" style="position:absolute; bottom: -383.3%; right: 0%; width: 1246px; height: 768px;">
+        <img src="{{asset('frames/backgroundFAQ.png')}}" style="position:absolute; bottom: -385.7%; right: 0%; width: 1246px; height: 790px; z-index: 0;">
+        <img src="{{asset('frames/purpleBlur.png')}}" style="position:absolute; bottom: -384.4%; right: 0%; width: 1246px; height: 766px;">
 
-        <h1 class="poppins-light" style="color: white; font-size: 64px; position:absolute; bottom: -352%; left: 28%; z-index: 1;">Have a Different Question?</h1>
+        <h1 class="poppins-light" style="color: white; font-size: 64px; position:absolute; bottom: -353.5%; left: 28%; z-index: 1;">Have a Different Question?</h1>
         <p class="poppins-light" style="color: white; font-size: 24px; position:absolute; bottom: -357%; left: 49.7%; z-index: 2;">Email us anytime</p>
         <p class="poppins-bold" style="color: white; letter-spacing: 3px; font-size: 30px; position:absolute; bottom: -359.3%; left: 44.3%; z-index: 2;">Or call - 081 234 5678</p>
+
+        <input type="text"  name="name" class="contactForm" style="position: absolute; bottom: -362.5%; left: 30%; padding-left: 20px;" placeholder="Name">
+        <input type="text"  name="email" class="contactForm" style="position: absolute; bottom: -362.5%; left: 59.5%; padding-left: 20px;" placeholder="Email address">
+        <input type="text"  name="subject" class="contactForm" style="width: 810px; position:absolute; bottom: -366.5%; left: 30%; padding-left: 20px;" placeholder="Subject">
+        <input type="text"  name="question" class="contactForm" style="width: 810px; height:150px; position:absolute; bottom: -376%; left: 30%; padding-left: 20px; padding-bottom: 100px;" placeholder="Ask a question">
+        <button class="poppins" type="submit" style="position:absolute; bottom: -379.5%; right: 13.7%; width: 140px; height: 45px; border-radius: 30px; background-color: #87FFF8; border: none; font-size: 20px; padding: 0px 5px 0px 5px;">Submit</button>
+
+        <img src="{{asset('frames/TIMELINE.png')}}" style="width: 653px; height: 90px; position:absolute; bottom: -396%; left: 29%; z-index: 1;">
+        <img src="{{asset('frames/codeTag3.png')}}" style="width: 601px; height: 440px; position:absolute; left: 0%; bottom: -423%;">
+        <img src="{{asset('frames/line2.png')}}" style="width: 6px; height: 1150px; position:absolute; bottom: -466%; left: 50%;">
+        <img src="{{asset('frames/Ellipse 5.png')}}" style="width: 28px; position:absolute; bottom: -406%; left: 49.25%;">
+        <img src="{{asset('frames/Ellipse 11.png')}}" style="width: 1370px; height: 950px; position:absolute; bottom: -460%; right: 0%;">
+        <img src="{{asset('frames/Ellipse 6.png')}}" style="width: 28px; position:absolute; bottom: -417%; left: 49.25%;">
+        <img src="{{asset('frames/Ellipse 6.png')}}" style="width: 28px; position:absolute; bottom: -430%; left: 49.25%;">
+        <img src="{{asset('frames/Ellipse 6.png')}}" style="width: 28px; position:absolute; bottom: -443%; left: 49.25%;">
+        <img src="{{asset('frames/Ellipse 6.png')}}" style="width: 28px; position:absolute; bottom: -457%; left: 49.25%;">
+        <img src="{{asset('frames/Ellipse 6.png')}}" style="width: 28px; position:absolute; bottom: -467%; left: 49.25%;">
+
     </div>
 </body>
 </html>
-
-
-
