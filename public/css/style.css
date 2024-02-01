@@ -103,3 +103,43 @@
         animation: moveLeft2 15s linear infinite;
     }
 
+    @keyframes moveLeft1 {
+        0% { transform: translateX(0%); }
+        100% { transform: translateX(-100%); }
+    }
+
+    .moving-image3 {
+        position: absolute;
+        animation: moveLeft1 8s linear infinite;
+    }
+
+    @keyframes moveLeft2 {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(0%); }
+    }
+
+    .moving-image4 {
+        position: absolute;
+        animation: moveLeft2 8s linear infinite;
+    }
+
+    @keyframes moveRight1 {
+        0% { transform: translateX(0%); }
+        100% { transform: translateX(100%); }
+    }
+
+    .moving-image5 {
+        position: absolute;
+        animation: moveRight1 8s linear infinite;
+    }
+
+    @keyframes moveRight2 {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(0%); }
+    }
+
+    .moving-image6 {
+        position: absolute;
+        animation: moveRight2 8s linear infinite;
+    }
+
