@@ -123,6 +123,14 @@
             font-size: 40px;
             font-weight: bold;
         }
+
+        @media (min-width: 1920px){
+            body {
+                width: auto;
+                height: auto;
+                font-size: auto;
+            }
+        }
 </style>
 
 <!DOCTYPE html>
@@ -417,6 +425,7 @@
         <p class="poppins timelineDate" style="bottom: -469.1%; left: 55%;">30 July 2023</p>
         <p class="poppins timelineBox" style="bottom: -469.5%; left: 16%; padding-right: 55px; padding-left: 55px; width: 434px;">Hacktech Day-3</p>
 
+        {{-- Mentors --}}
         <img src="{{asset('frames/Vector.png')}}" style="width: 1440px; height: 2080px; z-index: 0; position:absolute; bottom: -585%;">
         <img src="{{asset('frames/Rectangle 2438.png')}}" style="width: 1348px; height: 910px; position:absolute; bottom: -532%; left: 4%;">
         <img src="{{asset('frames/2023.png')}}" style="width: 680px; height: 260px; z-index: 1; position:absolute; bottom: -505%; left: 45%;">
@@ -426,7 +435,31 @@
         <p class="poppins" style="font-size: 64px; color: black; position:absolute; bottom: -497%; left: 10%; font-weight:bold; letter-spacing: 4px;">Meet our</p>
         <p class="poppins" style="font-size: 64px; color: #39219D; position:absolute; bottom: -501%; left: 10%; font-weight:bold; letter-spacing: 4px;">Mentors</p>
 
-        <img src="{{asset('frames/BUSINESS.png')}}" style="width: 1140px; height: 150px; position:absolute; bottom: -514%; left: 11%; z-index: 1;">
+        <img src="{{asset('frames/BUSINESS.png')}}" style="width: 1140px; height: 150px; position:absolute; bottom: -514%; left: 11%; z-index: 1">
+        <img src="{{asset('frames/Mentorss.png')}}" style="width: 1100px; height: 470px; position:absolute; bottom: -529%; left: 13%; z-index: 1;">
+
+        {{-- Juries --}}
+        <img src="{{asset('frames/Juries.png')}}" style="width: 137px; height: 30px; position:absolute; right: 6.3%; bottom: -535%;">
+        <img src="{{asset('frames/Rectangle 2440.png')}}" style="position: absolute; bottom: -582%; left: 4%; width: 1348px; height: 900px;">
+        <p style="color: black; position:absolute; bottom: -548%; left: 33%; font-size:64px; font-weight:bold; letter-spacing: 4px;">Meet our <span style="color: #39219D">Juries</span></p>
+        <p class="poppins" style="position:absolute; bottom: -550%; left: 42%; font-size: 20px; font-weight: 100; letter-spacing: 1px;">Juries Technospace</p>
+        <img src="{{asset('frames/Juries (FIX).png')}}" style="position: absolute; bottom: -577%; z-index:1; left: 19%; width: 900px; height: 500px;">
+
+        {{-- Sponsors --}}
+        <img src="{{asset('frames/Rectangle 2450.png')}}" style="position: absolute; bottom: -705%;">
+        <img src="{{asset('frames/SPONSOR.png')}}" style="position: absolute; bottom: -600%; left: 25%; width: 720px; height: 100px;">
+        <img src="{{asset('frames/Sponsor (1).png')}}" style="position: absolute; bottom: -659%; left: 6.5%; width: 1258px; height: 1090px;">
+        <img src="{{asset('frames/Line 9.png')}}" style="position: absolute; bottom: -622%; width: 1440px;">
+        <img src="{{asset('frames/Line 9.png')}}" style="position: absolute; bottom: -639%; width: 1440px;">
+        <img src="{{asset('frames/Line 9.png')}}" style="position: absolute; bottom: -656%; width: 1440px;">
+
+        {{-- Media Partner --}}
+        <img src="{{asset('frames/MEDIA PARTNER.png')}}" style="position:absolute; bottom: -675%; left: 10%; width: 1146px; height: 100px;">
+        <img src="{{asset('frames/medpar1.png')}}" class="moving-image3" style="width: 2900px; height: 270px; position:absolute; bottom: -691%;">
+        <img src="{{asset('frames/medpar1.png')}}" class="moving-image4" style="width: 2900px; height: 270px; position:absolute; bottom: -691%;">
+
+        <img src="{{asset('frames/medpar2.png')}}" class="moving-image5" style="width: 2900px; height: 270px; position:absolute; bottom: -705%;">
+        <img src="{{asset('frames/medpar2.png')}}" class="moving-image6" style="width: 2900px; height: 270px; position:absolute; bottom: -705%;">
 
     </div>
 </body>
