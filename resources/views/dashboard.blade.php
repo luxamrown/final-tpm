@@ -11,7 +11,7 @@
         background: linear-gradient(to right, #2F0CBD, #0D0043);
     }
     .gradient2 {
-        background: linear-gradient(to right, #0D0043, #2F0CBD);
+        background: linear-gradient(to right, #0D0043, #2F0CBD) !important;
     }
 
     .gap {
@@ -106,6 +106,23 @@
             font-family: 'Poppins';
         }
 
+        .timelineBox {
+            width: 428px;
+            background: linear-gradient(to right, #2F0CBD, #BC87FF);
+            position: absolute;
+            font-size: 40px;
+            color:white;
+            padding: 10px 25px 10px 25px;
+            border-radius: 40px;
+            font-weight:bold;
+        }
+
+        .timelineDate {
+            color: #4D26CB;
+            position:absolute;
+            font-size: 40px;
+            font-weight: bold;
+        }
 </style>
 
 <!DOCTYPE html>
@@ -357,7 +374,7 @@
         <p class="faq" style="bottom: -330%; z-index: 1; height: 120px;">Bagaimana jika para peserta sudah menyiapkan dan menggunakan source<br>code sebelum acara dimulai?<button type="reset" class="icon" style="top: 39.5% !important;"><span class="bi bi-chevron-down"></span></button></p>
         <p class="faq" style="bottom: -339%; z-index: 1; height: 120px;">Jika saya tidak lolos seleksi untuk Hacktech, bagaimana dengan biaya<br>pendaftaran saya? Dan bagaimana jika lolos tetapi tidak ingin melanjutkan?<button type="reset" class="icon" style="margin-left: 40px; top: 39.5% !important;"><span class="bi bi-chevron-down"></span></button></p>
 
-        <img src="{{asset('frames/contactUs.png')}}" style="position: absolute; bottom: -384%; width: 102px; height: 786px;">
+        <img src="{{asset('frames/contactUs.png')}}" style="position: absolute; bottom: -385%; width: 102px; height: 786px;">
         <img src="{{asset('frames/backgroundFAQ.png')}}" style="position:absolute; bottom: -385.7%; right: 0%; width: 1246px; height: 790px; z-index: 0;">
         <img src="{{asset('frames/purpleBlur.png')}}" style="position:absolute; bottom: -384.4%; right: 0%; width: 1246px; height: 766px;">
 
@@ -376,11 +393,40 @@
         <img src="{{asset('frames/line2.png')}}" style="width: 6px; height: 1150px; position:absolute; bottom: -466%; left: 50%;">
         <img src="{{asset('frames/Ellipse 5.png')}}" style="width: 28px; position:absolute; bottom: -406%; left: 49.25%;">
         <img src="{{asset('frames/Ellipse 11.png')}}" style="width: 1370px; height: 950px; position:absolute; bottom: -460%; right: 0%;">
-        <img src="{{asset('frames/Ellipse 6.png')}}" style="width: 28px; position:absolute; bottom: -417%; left: 49.25%;">
+        <img src="{{asset('frames/Ellipse 6.png')}}" style="width: 28px; position:absolute; bottom: -418.5%; left: 49.25%;">
         <img src="{{asset('frames/Ellipse 6.png')}}" style="width: 28px; position:absolute; bottom: -430%; left: 49.25%;">
         <img src="{{asset('frames/Ellipse 6.png')}}" style="width: 28px; position:absolute; bottom: -443%; left: 49.25%;">
         <img src="{{asset('frames/Ellipse 6.png')}}" style="width: 28px; position:absolute; bottom: -457%; left: 49.25%;">
         <img src="{{asset('frames/Ellipse 6.png')}}" style="width: 28px; position:absolute; bottom: -467%; left: 49.25%;">
+
+        <p class="poppins" style="color:#0D0043; position:absolute; bottom: -407.5%; left: 30%; font-size: 40px; font-weight:bold;">8 July 2023</p>
+        <p class="poppins gradient2 gradient-button2 timelineBox" style="bottom: -407.7%; left: 55%;">Open Registration</p>
+
+        <p class="poppins timelineDate" style="bottom: -420.3%; left: 55%;">23 July 2023</p>
+        <p class="poppins timelineBox" style="bottom: -420.5%; left: 16%">Close Registration</p>
+
+        <p class="poppins timelineDate" style="bottom: -432.1%; left: 28.1%;">26 July 2023</p>
+        <p class="poppins timelineBox" style="bottom: -432.5%; left: 55%">Technical Meeting</p>
+
+        <p class="poppins timelineDate" style="bottom: -445.1%; left: 55%;">28 July 2023</p>
+        <p class="poppins timelineBox" style="bottom: -445.5%; left: 16%; padding-right: 55px; padding-left: 55px; width: 428px;">Hacktech Day-1</p>
+
+        <p class="poppins timelineDate" style="bottom: -459.1%; left: 28.1%;">29 July 2023</p>
+        <p class="poppins timelineBox" style="bottom: -459.5%; left: 55%; padding-right: 55px; padding-left: 55px; width: 434px;">Hacktech Day-2</p>
+
+        <p class="poppins timelineDate" style="bottom: -469.1%; left: 55%;">30 July 2023</p>
+        <p class="poppins timelineBox" style="bottom: -469.5%; left: 16%; padding-right: 55px; padding-left: 55px; width: 434px;">Hacktech Day-3</p>
+
+        <img src="{{asset('frames/Vector.png')}}" style="width: 1440px; height: 2080px; z-index: 0; position:absolute; bottom: -585%;">
+        <img src="{{asset('frames/Rectangle 2438.png')}}" style="width: 1348px; height: 910px; position:absolute; bottom: -532%; left: 4%;">
+        <img src="{{asset('frames/2023.png')}}" style="width: 680px; height: 260px; z-index: 1; position:absolute; bottom: -505%; left: 45%;">
+        <img src="{{asset('frames/Rectangle 2455.png')}}" style="width: 1253px; height: 540px; z-index: 1; position:absolute; bottom: -531%; left: 6.78%;">
+
+        <p class="poppins" style="font-size: 20px; color: black; position:absolute; bottom: -492%; left: 10%; letter-spacing: 1px;">Mentors Technospace</p>
+        <p class="poppins" style="font-size: 64px; color: black; position:absolute; bottom: -497%; left: 10%; font-weight:bold; letter-spacing: 4px;">Meet our</p>
+        <p class="poppins" style="font-size: 64px; color: #39219D; position:absolute; bottom: -501%; left: 10%; font-weight:bold; letter-spacing: 4px;">Mentors</p>
+
+        <img src="{{asset('frames/BUSINESS.png')}}" style="width: 1140px; height: 150px; position:absolute; bottom: -514%; left: 11%; z-index: 1;">
 
     </div>
 </body>
