@@ -572,7 +572,38 @@
         <img src="{{asset('frames/Line 12.png')}}" style="width: 304px; position:absolute; bottom: -789.8%; left: 17%; z-index: 1;">
         <img src="{{asset('frames/Line 12.png')}}" style="width: 304px; position:absolute; bottom: -795.8%; left: 17%; z-index: 1;">
         <img src="{{asset('frames/Line 12.png')}}" style="width: 304px; position:absolute; bottom: -809.8%; left: 17%; z-index: 1;">
+        <img src="{{asset('frames/image 90.png')}}" style="position: absolute; bottom: -814%; left: 41.4%; z-index: 1; width:740px; height: 665px;">
+        <img src="{{asset('frames/locator 1.png')}}" style="position: absolute; bottom: -800%; left: 57.5%; z-index: 1; width: 61px;">
+        <img src="{{asset('frames/Rectangle 2462.png')}}" style="position: absolute; bottom: -800%; left: 62.5%; z-index: 1; width: 247px; height: 105px;">
+        <p class="poppins" style="position: absolute; bottom: -799.5%; z-index:1; left: 65.5%; width: 163px; font-size:16px; line-height:24px; color:black;">Lorem ipsum dolor<br>sit amet<br>consectetur</p>
 
+        <button type="submit" class="poppins" style="position: absolute; bottom: -815%; left: 18%; width: 269px; height: 55px; padding: 14px 68px 14px 68px; background-color: white; border:none; outline:none; letter-spacing: 1px; font-size: 18px; z-index: 1;">
+            <p style="width: 200px; height: 27px; position:absolute; left: 13%; bottom: 0%;">Send Message</p>
+        </button>
+
+    <footer>
+        <img src="{{asset('frames/Rectangle 2463.png')}}" style="position: absolute; bottom: -837%;">
+
+        <p class="poppins-bold" style="position: absolute; bottom: -828.3%; left: 6.5%; font-size: 16px;">Home</p>
+        <p class="poppins-bold" style="position: absolute; bottom: -830%; left: 6.5%; font-size: 16px;">About</p>
+
+        <p class="poppins-bold" style="position: absolute; bottom: -828.3%; left: 19.5%; font-size: 16px;">Champion & Prizes</p>
+        <p class="poppins-bold" style="position: absolute; bottom: -830%; left: 19.5%; font-size: 16px;">FAQ</p>
+
+        <p class="poppins-bold" style="position: absolute; bottom: -828.3%; left: 39.5%; font-size: 16px;">Timeline</p>
+        <p class="poppins-bold" style="position: absolute; bottom: -830%; left: 39.5%; font-size: 16px;">Mentor & Jury</p>
+
+        <p class="poppins-bold" style="position:absolute; bottom: -830.5%; left: 70.5%; font-size: 44px; color:black;">HACKTECH</p>
+        <p class="poppins-bold" style="position:absolute; bottom: -830.5%; left: 89%; font-size: 44px; color:black; letter-spacing: -4.5px;"> < / > </p>
+
+        <img src="{{asset('frames/Line 14.png')}}" style="width: 1258px; position:absolute; bottom: -831.5%; left: 6.5%;">
+
+        <p class="poppins-light" style="position: absolute; bottom: -835.5%; left: 6.5%; font-size: 16px; font-weight:bold;">Copyright © 2023, Kelompok 4</p>
+        <p class="poppins-light" style="position: absolute; bottom: -835.5%; right: 20.3%; font-size: 16px; font-weight:bold;">Privacy Policy 61.8</p>
+        <p class="poppins-light" style="position: absolute; bottom: -835.5%; right: 6.3%; font-size: 16px; font-weight:bold;">Terms of Service</p>
+
+
+    </footer>
     </div>
 </body>
 </html>
