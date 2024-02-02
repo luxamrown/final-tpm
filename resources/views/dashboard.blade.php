@@ -124,6 +124,76 @@
             font-weight: bold;
         }
 
+        .pillBox {
+            width: 637px;
+            height: 75px;
+            background-color: white;
+            border-radius: 38px;
+            box-shadow: inset 7px 3px 7px rgba(0, 0, 0, 0.5);
+        }
+
+        .innerPillButton {
+            width: 277px;
+            height: 52px;
+            border-radius: 38px;
+            padding: 7.7px;
+            gap: 7.7px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            background-color: #AEAEAE;
+            box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .innerPillButton.active {
+            background-color: #2F0CBD;
+        }
+
+        .eventButton {
+            width: 171px;
+            height: 34px;
+            background:transparent;
+            border: 1px solid #FFF;
+            border-radius:13px;
+            position:absolute;
+            bottom: -750%;
+            color:white;
+            text-align:center;
+            font-size: 14px;
+            letter-spacing: 2px;
+            padding-left: 18px;
+        }
+
+        .getInTouch {
+            color: white;
+            border: none;
+            position: absolute;
+            z-index: 1;
+            background-color: transparent;
+            outline: none;
+        }
+
+        .getInTouch::placeholder {
+            color: #666;
+            font-family: 'Poppins-Light';
+            font-size: 20px;
+        }
+
+        textarea {
+            padding-top: 10px;
+        }
+
+        textarea.contactForm {
+            resize: none;
+        }
+
+        textarea.getInTouch {
+            width: 304px;
+            height: 200px;
+            resize: none;
+        }
+
         @media (min-width: 1920px){
             body {
                 width: auto;
@@ -393,7 +463,7 @@
         <input type="text"  name="name" class="contactForm" style="position: absolute; bottom: -362.5%; left: 30%; padding-left: 20px;" placeholder="Name">
         <input type="text"  name="email" class="contactForm" style="position: absolute; bottom: -362.5%; left: 59.5%; padding-left: 20px;" placeholder="Email address">
         <input type="text"  name="subject" class="contactForm" style="width: 810px; position:absolute; bottom: -366.5%; left: 30%; padding-left: 20px;" placeholder="Subject">
-        <input type="text"  name="question" class="contactForm" style="width: 810px; height:150px; position:absolute; bottom: -376%; left: 30%; padding-left: 20px; padding-bottom: 100px;" placeholder="Ask a question">
+        <textarea name="question" class="contactForm" style="width: 810px; height:150px; position:absolute; bottom: -376%; left: 30%; padding-left: 20px; padding-bottom: 100px; box-sizing:border-box" placeholder="Ask a question"></textarea>
         <button class="poppins" type="submit" style="position:absolute; bottom: -379.5%; right: 13.7%; width: 140px; height: 45px; border-radius: 30px; background-color: #87FFF8; border: none; font-size: 20px; padding: 0px 5px 0px 5px;">Submit</button>
 
         <img src="{{asset('frames/TIMELINE.png')}}" style="width: 653px; height: 90px; position:absolute; bottom: -396%; left: 29%; z-index: 1;">
@@ -461,6 +531,79 @@
         <img src="{{asset('frames/medpar2.png')}}" class="moving-image5" style="width: 2900px; height: 270px; position:absolute; bottom: -705%;">
         <img src="{{asset('frames/medpar2.png')}}" class="moving-image6" style="width: 2900px; height: 270px; position:absolute; bottom: -705%;">
 
+        <img src="{{asset('frames/Rectangle 2457.png')}}" style="position: absolute; bottom: -833%;">
+        <img src="{{asset('frames/Rectangle 2454.png')}}" style="position: absolute; bottom: -755%; left: 3.3%;">
+        <img src="{{asset('frames/Rectangle 2456.png')}}" style="position: absolute; bottom: -718.7%; left: 6.05%; width: 1258.7px;">
+
+        <p class="poppins" style="position:absolute; bottom: -718.5%; left: 36%; font-size: 64px; letter-spacing: 3px; font-weight:bold;">Other <span style="color: #39219D">Event</span></p>
+        <div class="pillBox" style="position:absolute; bottom: -726%; left: 28%;">
+            <button class="innerPillButton active poppins" style="position: absolute; bottom: 15%; left: 2.5%; z-index: 1; font-weight:600; font-size: 18px; letter-spacing: 1px;">VIRTUAL CONFERENCE</button>
+            <button class="innerPillButton poppins" style="position: absolute; bottom: 15%; left: 52.5%; z-index: 1; font-size: 18px; letter-spacing: 1px; font-weight:600;">DEVELOPER WORKSHOP</button>
+        </div>
+        <img src="{{asset('frames/image 89.png')}}" style="width: 629px; height: 410px; position:absolute; bottom: -751%; left: 9%;">
+        <p class="poppins-bold" style="position:absolute; bottom: -733%; left: 64%; font-size: 35px; color: white; letter-spacing: 1px;">29 April 2023</p>
+        <p class="poppins-light" style="position:absolute; bottom: -752%; left: 57%; font-size: 15px; line-height: 30px; text-align:center; color: white; letter-spacing: 1px; width: 469px; height: 340px;">
+            Lorem ipsum dolor sit amet consectetur.
+            Quisque dui ut at fermentum. Donec elit sed elit semper tincidunt dictum velit.
+            Eu in vulputate faucibus sapien a. Risus ac sagittis etiam aliquet nunc.
+            Non tellus pellentesque purus gravida. Hac et scelerisque a sem tempor ac consectetur facilisis duis.
+            Ut vel diam in eget elementum amet massa bibendum.
+            Laoreet phasellus semper molestie placerat proin est sed dictumst amet.
+            Pharetra et et tortor felis vestibulum donec sagittis ac.
+        </p>
+        <button class="poppins eventButton" style="left: 60%" onclick="">Visit Website</button>
+        <button class="poppins eventButton" style="left: 75%;" onclick="">Register Here</button>
+        <img src="{{asset('frames/web1.png')}}" style="position:absolute; bottom: -749.5%; left: 60.7%; width: 17px; z-index: 1;">
+        <img src="{{asset('frames/web2.png')}}" style="position:absolute; bottom: -749.5%; left: 75.7%; width: 17px; z-index: 1;">
+
+        <img src="{{asset('frames/GET IN TOUCH.png')}}" style="position: absolute; bottom: -770%; width: 1100px; height: 100px; left: 11.5%;">
+        <img src="{{asset('frames/Rectangle 2458.png')}}" style="position: absolute; bottom: -816%; left: 3%;">
+        <img src="{{asset('frames/Frame 40199.png')}}" style="position: absolute; bottom: -811%; width: 46px; height: 550px; left: 8%;">
+        <img src="{{asset('frames/Rectangle 2460.png')}}" style="position: absolute; bottom: -818%; left: 14%; z-index: 1">
+        <img src="{{asset('frames/Rectangle 2459.png')}}" style="position: absolute; bottom: -818%; left: 12.5%;">
+        <p class="poppins" style="position:absolute; bottom: -780%; left: 17%; color:white; font-weight:bold; font-size: 36px; letter-spacing: 2px; z-index:1;">Contact Us</p>
+
+        <input type="text" class="getInTouch" name="nama" placeholder="Name" style="bottom: -783%; left: 17%;">
+        <input type="text" class="getInTouch" name="subject" placeholder="Subject" style="bottom: -789%; left: 17%;">
+        <input type="text" class="getInTouch" name="email" placeholder="E-mail Address" style="bottom: -795%; left: 17%;">
+        <textarea type="text" class="getInTouch" name="message" placeholder="Message" style="bottom: -808.7%; left: 17%;"></textarea>
+
+        <img src="{{asset('frames/Line 12.png')}}" style="width: 304px; position:absolute; bottom: -783.8%; left: 17%; z-index: 1;">
+        <img src="{{asset('frames/Line 12.png')}}" style="width: 304px; position:absolute; bottom: -789.8%; left: 17%; z-index: 1;">
+        <img src="{{asset('frames/Line 12.png')}}" style="width: 304px; position:absolute; bottom: -795.8%; left: 17%; z-index: 1;">
+        <img src="{{asset('frames/Line 12.png')}}" style="width: 304px; position:absolute; bottom: -809.8%; left: 17%; z-index: 1;">
+        <img src="{{asset('frames/image 90.png')}}" style="position: absolute; bottom: -814%; left: 41.4%; z-index: 1; width:740px; height: 665px;">
+        <img src="{{asset('frames/locator 1.png')}}" style="position: absolute; bottom: -800%; left: 57.5%; z-index: 1; width: 61px;">
+        <img src="{{asset('frames/Rectangle 2462.png')}}" style="position: absolute; bottom: -800%; left: 62.5%; z-index: 1; width: 247px; height: 105px;">
+        <p class="poppins" style="position: absolute; bottom: -799.5%; z-index:1; left: 65.5%; width: 163px; font-size:16px; line-height:24px; color:black;">Lorem ipsum dolor<br>sit amet<br>consectetur</p>
+
+        <button type="submit" class="poppins" style="position: absolute; bottom: -815%; left: 18%; width: 269px; height: 55px; padding: 14px 68px 14px 68px; background-color: white; border:none; outline:none; letter-spacing: 1px; font-size: 18px; z-index: 1;">
+            <p style="width: 200px; height: 27px; position:absolute; left: 13%; bottom: 0%;">Send Message</p>
+        </button>
+
+    <footer>
+        <img src="{{asset('frames/Rectangle 2463.png')}}" style="position: absolute; bottom: -837%;">
+
+        <p class="poppins-bold" style="position: absolute; bottom: -828.3%; left: 6.5%; font-size: 16px;">Home</p>
+        <p class="poppins-bold" style="position: absolute; bottom: -830%; left: 6.5%; font-size: 16px;">About</p>
+
+        <p class="poppins-bold" style="position: absolute; bottom: -828.3%; left: 19.5%; font-size: 16px;">Champion & Prizes</p>
+        <p class="poppins-bold" style="position: absolute; bottom: -830%; left: 19.5%; font-size: 16px;">FAQ</p>
+
+        <p class="poppins-bold" style="position: absolute; bottom: -828.3%; left: 39.5%; font-size: 16px;">Timeline</p>
+        <p class="poppins-bold" style="position: absolute; bottom: -830%; left: 39.5%; font-size: 16px;">Mentor & Jury</p>
+
+        <p class="poppins-bold" style="position:absolute; bottom: -830.5%; left: 70.5%; font-size: 44px; color:black;">HACKTECH</p>
+        <p class="poppins-bold" style="position:absolute; bottom: -830.5%; left: 89%; font-size: 44px; color:black; letter-spacing: -4.5px;"> < / > </p>
+
+        <img src="{{asset('frames/Line 14.png')}}" style="width: 1258px; position:absolute; bottom: -831.5%; left: 6.5%;">
+
+        <p class="poppins-light" style="position: absolute; bottom: -835.5%; left: 6.5%; font-size: 16px; font-weight:bold;">Copyright © 2023, Kelompok 4</p>
+        <p class="poppins-light" style="position: absolute; bottom: -835.5%; right: 20.3%; font-size: 16px; font-weight:bold;">Privacy Policy 61.8</p>
+        <p class="poppins-light" style="position: absolute; bottom: -835.5%; right: 6.3%; font-size: 16px; font-weight:bold;">Terms of Service</p>
+
+
+    </footer>
     </div>
 </body>
 </html>
