@@ -167,18 +167,6 @@
                 </section>
 
                 <section class = "registration__form__grid__item">
-                    <!-- GITHUB -->
-                    <section class = "registration__form__input__section">
-                        <h4 class = "registration__form__label"> Github </h4>
-                        <input
-                            class = "registration__form__input"
-                            id = "input-github"
-                            type = "url"
-                            required
-                        />
-                        <p class = "registration__form__error" id = "error-github"> Please enter a valid github account. </p>
-                    </section>
-
                     <!-- BIRTH PLACE -->
                     <section class = "registration__form__input__section">
                         <h4 class = "registration__form__label"> Birth Place </h4>
@@ -193,7 +181,7 @@
 
                     <!-- BIRTH DATE -->
                     <section class = "registration__form__input__section">
-                        <h4 class = "registration__form__label"></h4> Birth Date </h4>
+                        <h4 class = "registration__form__label"> Birth Date </h4>
                         <input
                             class = "registration__form__input"
                             id = "input-birth-date"
@@ -201,7 +189,19 @@
                             required
                         />
                         <p class = "registration__form__error" id = "error-birth-date"> You must be at least 17 years old. </p>
-                    </section>          
+                    </section>
+                    
+                    <!-- GITHUB -->
+                    <section class = "registration__form__input__section">
+                        <h4 class = "registration__form__label"> Github </h4>
+                        <input
+                            class = "registration__form__input"
+                            id = "input-github"
+                            type = "url"
+                            required
+                        />
+                        <p class = "registration__form__error" id = "error-github"> Please enter a valid github account. </p>
+                    </section>                    
                 </section>                
             </section>
 
@@ -347,3 +347,4 @@
     </script>
 </body>
 </html>
+

@@ -37,6 +37,7 @@ html, body {
     flex-direction: row;
     align-items: center;
     padding: 0.75rem;
+    cursor: pointer;
 }
 
 .dashboard__navigation__link__first {
@@ -99,6 +100,7 @@ html, body {
 */
 
 .dashboard {
+    display: block;
     width: 85%;
     padding-left: 1rem;
     margin-left: 15%;
@@ -305,6 +307,15 @@ html, body {
 */
 .timeline {
     display: none;
+    width: 85%;
+    padding-left: 1rem;
+    margin-left: 15%;    
 }
 
-
+.timeline__image {
+    display: block;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    pointer-events: none;
+}

@@ -1,43 +1,42 @@
-// DUMMY PURPOSE ONLY
-const DUMMY_USERS = [
-    {
-        groupName: "bejo@gmail.com",
-        password: "pass123",
-    },
-    {
-        groupName: "retno@gmail.com",
-        password: "pass123",
-    },
-];
-
 const groupName = document.getElementById("input-group-name");
 const password = document.getElementById("input-password");
 
-const loginButton = document.getElementById("login-button");
-
 const loginError = document.getElementById("login-error");
 
-let loginUser;
+const loginButton = document.getElementById("login-button");
 loginButton.addEventListener("click", async () => {
-    loginUser = DUMMY_USERS.find((u) => {
-        return (
-            u.groupName === groupName.value.trim() && u.password === password.value.trim()
-        );
+    const response = await fetch("/login", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            name: groupName.value,
+            password: password.value
+        }),
     });
 
-    console.log(loginUser);
+    const data = await response.json();
 
-    if (loginUser) {
-        console.log("Successfully login with " + loginUser.groupName);
+    // Login success
+    if (response.status === 200) {
         loginError.style.display = "none";
+        sessionStorage.setItem("login-user", JSON.stringify(data));
 
-        sessionStorage.setItem("loginUser", JSON.stringify(loginUser));
-        location.replace("/dashboard");
-        
+        // The user have an admin role
+        if (data.user.is_admin === 1) {
+            // Rediret to admin panel
+            window.location.href = "/admin";
+        }
+        else {
+            // The user doesn't have admin role
+            // Redirect to dashboard
+            window.location.href = "/dashboard";
+        }
         return;
     }
-    else {
-        console.log("Failed login");
-        loginError.style.display = "block";
-    }
+
+    // Login failed
+    loginError.style.display = "block";
+    return;
 });

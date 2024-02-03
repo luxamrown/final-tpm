@@ -1,3 +1,5 @@
+// https://documenter.getpostman.com/view/12963788/TVRg69g4#c088cc4a-0855-482e-be82-ce98f66f0f6f
+
 const stepOne = document.getElementById("step-1");
 const stepTwo = document.getElementById("step-2");
 const stepThree = document.getElementById("step-3");
@@ -86,6 +88,7 @@ stepOneNextButton.addEventListener("click", () => {
         errorBinusian.style.display = "block";
         isBinusianValid = false;
     }
+
 
     if (isGroupNameValid && isPasswordValid && isConfirmPasswordValid && isBinusianValid) {
         stepOne.style.display = "none";
@@ -228,7 +231,6 @@ birthPlace.addEventListener("keyup", () => {
 });
 
 // BIRTH DATE
-// FIX ME: ADD AGE
 const birthDate = document.getElementById("input-birth-date");
 const birthDateError = document.getElementById("error-birth-date");
 let isBirthDateValid = false;
@@ -275,6 +277,8 @@ stepTwoNextButton.addEventListener("click", () => {
     ) {
         stepTwo.style.display = "none";
         stepThree.style.display = "block";
+
+        isBinusian = isBinusian === "true";
 
         if (isBinusian) {
             stepThreeBinusian.style.display = "block";
@@ -434,41 +438,86 @@ addIdCardContainer.addEventListener("click", () => {
     idCard.click();
 });
 
+
+
 // SUBMIT
-// FIXME: FETCH API AND REDIRECT
 const submitButton = document.getElementById("button-register");
-submitButton.addEventListener("click", () => {
-    const registrationData = {
-        groupName: groupName.value,
-        password: password.value,
-        isBinusian,
-        email: email.value,
-        whatsapp: whatsapp.value,
-        line: line.value,
-        github: github.value,
-        birthplace: birthPlace.value,
-        birthDate: birthDate.value,
-        CV: CV.files[0],
-        flazzCard: flazzCard.files[0],
-        idCard: idCard.files[0],
-    };
-
-    if ((isCVValid && isFlazzCardValid && isBinusian) || (isCVValid && isIdCardValid && !isBinusian)) {
-        console.log("Registration completed with: ", registrationData);
-        // Redirect?
-        // location.replace("https://www.w3schools.com");
-        return;
-    }
-
+submitButton.addEventListener("click", async () => {
+    // Validation
     if (!isCVValid) {
         CVError.style.display = "block";
+    }
+    else {
+        CVError.style.display = "none";
     }
 
     if (isBinusian && !isFlazzCardValid) {
         flazzCardError.style.display = "block";
+
+    }
+    else {
+        flazzCardError.style.display = "none";
     }
 
     if (!isBinusian && !isIdCardValid) {
         idCardError.style.display = "block";
     }
+    else {
+        idCardError.style.display = "none";
+    }
+
+    // Convert files to Base64
+    const toBase64 = file => new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = reject;
+    });
+
+    const today = new Date();
+    const dd = String(today.getDate()).padStart(2, '0');
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const yyyy = today.getFullYear();
+
+    const birthDateVal = birthDate.value.split("-");
+    
+    if ((isCVValid && isFlazzCardValid && isBinusian) || (isCVValid && isIdCardValid && !isBinusian)) {
+        const response = await fetch("/register", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name: groupName.value,
+                password: password.value,
+                is_binusian: isBinusian,
+                fullname: fullName.value,
+                email: email.value,
+                whatsapp: whatsapp.value,
+                line_id: line.value,
+                github: github.value,
+                birthplace: birthPlace.value,
+                birthdate: `${birthDateVal[2]}-${birthDateVal[1]}-${birthDateVal[0]}`,
+                regist_date: `${dd}-${mm}-${yyyy}`,
+                fileCv: await toBase64(CV.files[0]),
+                fileFlazz: isBinusian ? await toBase64(flazzCard.files[0]) : "",
+                fileId: !isBinusian ? await toBase64(idCard.files[0]) : "",
+            })
+        });
+
+        // Registration success
+        if (response.status === 200) {
+            alert("Registration success! Please login");
+            window.location.href = "/login";
+
+        }
+
+        // Registration failed
+        alert("Registration failed!");
+        window.location.reload();
+
+        return;
+    }
+
+
 });
