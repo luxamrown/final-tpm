@@ -47,25 +47,25 @@ else {
         // Fetch participants data and set the table data
         const fetchAllParticipantsData = async () => {
             const participants = (await getAllParticipantsData()).data;   
-            // console.log(participants); 
+            console.log(participants); 
             const tableData = participants.map((p, idx) => {
                 return (   
                     `<tr key = "${idx}">
                         <td> ${idx + 1} </td>
-                        <td> ${p.fullname} </td>
-                        <td> ${p.regist_date.split("-")[0].length === 4 ? p.regist_date.split("-")[2] + "-" + p.regist_date.split("-")[1] + "-" + p.regist_date.split("-")[0] : p.regist_date} </td>
+                        <td> ${p.groupData.name} </td>
+                        <td> ${p.groupDetails.regist_date.split("-")[0].length === 4 ? p.groupDetails.regist_date.split("-")[2] + "-" + p.groupDetails.regist_date.split("-")[1] + "-" + p.groupDetails.regist_date.split("-")[0] : p.groupDetails.regist_date} </td>
                         <td class = "table__button__container"> 
-                            <button class = "table__button table__button_view" id = "view-${p.id}">
+                            <button class = "table__button table__button_view" id = "view-${p.groupDetails.id}" data-team_name = "${p.groupData.name}">
                                 View
                                 <img src = "img/icon-view.png"/>
                             </button>
 
-                            <button class = "table__button table__button_edit" id = "edit-${p.id}">
+                            <button class = "table__button table__button_edit" id = "edit-${p.groupDetails.id}" data-team_name = "${p.groupData.name}">
                                 Edit
                                 <img src = "img/icon-edit.png"/>
                             </button>
 
-                            <button class = "table__button table__button_delete" id = "delete-${p.id}">
+                            <button class = "table__button table__button_delete" id = "delete-${p.groupDetails.id}">
                                 Delete
                                 <img src = "img/icon-delete.png"/>
                             </button>
@@ -80,14 +80,14 @@ else {
             const viewButtons = document.getElementsByClassName("table__button_view");
             for (let button of viewButtons) {
                 button.addEventListener("click", () => {
-                    viewData(button.id);
+                    viewData(button.id, button.dataset.team_name);
                 });
             }
             
             const editButtons = document.getElementsByClassName("table__button_edit");
             for (let button of editButtons) {
                 button.addEventListener("click", () => {
-                    editData(button.id);
+                    editData(button.id, button.dataset.team_name);
                 });
             }
 
@@ -124,14 +124,16 @@ else {
         });
 
         // View data
-        const viewData = async (buttonId) => {
+        const viewData = async (buttonId, teamName) => {
             const data = await getParticipantDataById(buttonId.split("-")[1]);
+
+            console.log(data);
         
             const viewContent = 
             `   <section class = "view_data">
                     <header class = "view_data__header">
                         <h1> VIEW DATA </h1>
-                        <h2> ${data.fullname} </h2>
+                        <h2> ${teamName} </h2>
                     </header> 
 
                     <section class = "view_data__information__container">
@@ -192,14 +194,14 @@ else {
         }
 
         // Edit data
-        const editData = async (buttonId) => {
+        const editData = async (buttonId, teamName) => {
             const data = await getParticipantDataById(buttonId.split("-")[1]);
         
             const editContent = 
             `   <form class = "view_data">
                     <header class = "view_data__header">
                         <h1> EDIT DATA </h1>
-                        <h2> ${data.fullname} </h2>
+                        <h2> ${teamName} </h2>
                     </header> 
 
                     <section class = "view_data__information__container">
