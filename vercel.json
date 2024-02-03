@@ -11,7 +11,7 @@
         { "src": "/fonts/(.*)", "dest": "/public/fonts/"},
         { "src": "/css/(.*)", "dest": "/public/css/"},
         { "src": "/js/(.*)", "dest": "/public/js/"},
-        { "src": "/file/(.*)", "dest": "/public/file/"},
+        { "src": "/storage/file/(.*)", "dest": "/public/storage/file/"},
         { "src": "/(.*)", "dest": "/api/" }
     ],
     "env": {
