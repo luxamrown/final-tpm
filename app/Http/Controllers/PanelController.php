@@ -14,12 +14,25 @@ class PanelController extends Controller
         $responseMessage = "Berhasil Mendapatkan List Tim"; 
         $devMessage = "All Data Fetch Success";
 
-        $groups = GroupData::all();
+        $groupData = GroupData::all();
+
+        $data = [];
+
+        foreach($groupData as $group) {
+            $groupNewData = Group::findOrFail($group->group_id);
+
+            $merge_object = [
+                "groupData" => $groupNewData,
+                "groupDetails" => $group
+            ];
+
+            array_push($data, $merge_object);
+        }
 
         return response([
             "success" => $success,
             "devMessage"=> $devMessage,
-            "data" => $groups,
+            "data" => $data,
             "message" =>  $responseMessage
         ]);
     }
