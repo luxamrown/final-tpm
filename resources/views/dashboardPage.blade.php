@@ -21,11 +21,12 @@
         <h1 class = "dashboard__navigation__title"> HACK<span>TECH</span></h1>
 
         <section class = "dashboard__navigation__link__container">
-            <section class = "dashboard__navigation__link dashboard__navigation__link__first dashboard__navigation__link__active">
+            <section class = "dashboard__navigation__link dashboard__navigation__link__first dashboard__navigation__link__active" id = "navigation-dashboard">
                 <section class = "dashboard__navigation__link__icon__container">
                     <img
                         class = "dashboard__navigation__link__icon"
                         src = "{{ asset('img/icon-dashboard.png') }}"
+                        id = "dashboard-icon"
                     />
                 </section>
                 <section class = "dashboard__navigation__link__text">
@@ -33,11 +34,12 @@
                 </section>
             </section>
 
-            <section class = "dashboard__navigation__link">
+            <section class = "dashboard__navigation__link" id = "navigation-timeline">
                 <section class = "dashboard__navigation__link__icon__container">
                     <img
                         class = "dashboard__navigation__link__icon"
                         src = "{{ asset('img/icon-timeline.png') }}"
+                        id = "timeline-icon"
                     />
                 </section>
                 <section class = "dashboard__navigation__link__text">
@@ -46,11 +48,12 @@
             </section>
         </section>
 
-        <section class = "dashboard__navigation__link dashboard__navigation__logout__container">
+        <section class = "dashboard__navigation__link dashboard__navigation__logout__container" id = "logout">
             <section class = "dashboard__navigation__link__icon__container">
                 <img
                     class = "dashboard__navigation__logout__icon"
                     src = "{{ asset('img/icon-logout.png') }}"
+
                 />
             </section>
             <section class = "dashboard__navigation__link__text">
@@ -59,9 +62,9 @@
         </section>
     </nav>
 
-    <main class = "dashboard">
+    <main class = "dashboard" id = "dashboard">
         <header class = "dashboard__header">
-            <h1 class = "dashboard__header__title"> Hello, <span class = "leader-full-name"> HepiNewYear</span>! </h1>
+            <h1 class = "dashboard__header__title"> Hello, <span class = "group-name"> HepiNewYear</span>! </h1>
         </header>
 
         <section class = "dashboard__announcement">
@@ -77,15 +80,16 @@
         </section>
 
 
-        <h1 class = "dashboard__container__title"> HepiNewYears's Leader Information </h1>
+        <h1 class = "dashboard__container__title"><span class = "group-name">HepiNewYears</span>'s Leader Information </h1>
         <section class = "dashboard__container">
             <section class = "dashboard__leader_information__grid__container">
                 <!-- FULL NAME -->
                 <section class = "dashboard__leader_information__grid">
                     <p class = "dashboard__leader_information__grid__text"> Full Name </p>
 
-                    <section class = "dashboard__leader_information__grid__information leader-full-name">
-                        Isyana Sarasvati
+                    <section class = "dashboard__leader_information__grid__information" 
+                    id = "leader-full-name">
+                        
                     </section>
                 </section>
 
@@ -94,7 +98,7 @@
                     <p class = "dashboard__leader_information__grid__text"> Whatsapp Number </p>
 
                     <section class = "dashboard__leader_information__grid__information" id = "leader-whatsapp-number">
-                        08195556667
+                        
                     </section>
                 </section>                
  
@@ -103,7 +107,7 @@
                     <p class = "dashboard__leader_information__grid__text"> Email </p>
 
                     <section class = "dashboard__leader_information__grid__information" id = "leader-email">
-                        isyana.sarasvati@gmail.com
+                        
                     </section>
                 </section>                  
 
@@ -112,7 +116,7 @@
                     <p class = "dashboard__leader_information__grid__text"> Line ID </p>
 
                     <section class = "dashboard__leader_information__grid__information" id = "leader-line">
-                        Test
+                        
                     </section>
                 </section>                  
 
@@ -121,7 +125,7 @@
                     <p class = "dashboard__leader_information__grid__text"> Github </p>
 
                     <section class = "dashboard__leader_information__grid__information" id = "leader-github">
-                        Test
+                       
                     </section>
                 </section> 
 
@@ -130,7 +134,7 @@
                     <p class = "dashboard__leader_information__grid__text"> Birth Place & Date </p>
 
                     <section class = "dashboard__leader_information__grid__information" id = "leader-birth">
-                        DKI JAKARTA, 08/09/1998
+                        
                     </section>
                 </section>                 
 
@@ -188,8 +192,18 @@
         </section>
     </main>
 
-    <main class = "timeline">
+    <main class = "timeline" id = "timeline">
+        <h1 class = "dashboard__container__title"> Timeline </h1>
+        <section class = "timeline__container">
+            <img
+                class = "timeline__image"
+                src = "{{ asset('img/timeline.png') }}"
+            />            
+        </section>
 
     </main>
+
+    <script src = "{{ asset('js/dashboard.js') }}">
+    </script>
 </body>
 </html>
