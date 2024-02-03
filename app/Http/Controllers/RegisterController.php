@@ -41,7 +41,7 @@ class RegisterController extends Controller
         
         list($fileCv, $typeFileCv, $fileNameCv) = RegisterController::parseUriFile($request->fileCv, $request->name . "cv");
         try {
-            file_put_contents('../tmp/'. $fileNameCv . "." . $typeFileCv, $fileCv);
+            file_put_contents('tmp/'. $fileNameCv . "." . $typeFileCv, $fileCv);
         } catch (\Throwable $th) {
             $success = false;
             $responseMessage = "Error when save file";
@@ -51,7 +51,7 @@ class RegisterController extends Controller
             list($fileFlazz, $typeFileFlazz, $fileNameFlazz) = RegisterController::parseUriFile($request->fileFlazz, $request->name . "flazz");
             
             try {
-                file_put_contents('../tmp/'. $fileNameFlazz . "." . $typeFileFlazz, $fileFlazz);
+                file_put_contents('tmp/'. $fileNameFlazz . "." . $typeFileFlazz, $fileFlazz);
             } catch (\Throwable $th) {
                 $success = false;
                 $responseMessage = "Error when save file";
@@ -60,7 +60,7 @@ class RegisterController extends Controller
             list($fileId, $typeFileId, $fileNameId) = RegisterController::parseUriFile($request->fileId, $request->name . "id");
 
             try {
-                file_put_contents('../tmp/'. $fileId . "." . $typeFileId, $fileNameId);
+                file_put_contents('tmp/'. $fileId . "." . $typeFileId, $fileNameId);
             } catch (\Throwable $th) {
                 $success = false;
                 $responseMessage = "Error when save file";
