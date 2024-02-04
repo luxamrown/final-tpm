@@ -28,9 +28,9 @@ class GroupDataFactory extends Factory
                 'github' => $fixUsername,
                 'birthplace' => $this->faker->city(),
                 'birthdate' => $this->faker->date(),
-                'cv_file' => '',
-                'flazz_file' => '',
-                'idcard_file' => '',
+                'cv_file' => 'BNCCflazz.jpeg',
+                'flazz_file' => 'BNCCflazz.jpeg',
+                'idcard_file' => 'BNCCflazz.jpeg',
                 'regist_date' => date("Y-m-d",time())
         ];
     }
