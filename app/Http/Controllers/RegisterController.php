@@ -39,7 +39,7 @@ class RegisterController extends Controller
 
         $newGroup = RegisterController::registerGroup($request->name, $request->password, $request->is_binusian);
         
-        list($fileCv, $typeFileCv, $fileNameCv) = RegisterController::parseUriFile($request->fileCv, $request->name . "cv");
+        list($fileCv, $typeFileCv, $fileNameCv) = RegisterController::parseUriFile($request->fileCv, $request->name . "cv" . uniqid());
         try {
             file_put_contents('storage/file/'. $fileNameCv . "." . $typeFileCv, $fileCv);
         } catch (\Throwable $th) {
@@ -48,7 +48,7 @@ class RegisterController extends Controller
         }
 
         if($request->is_binusian){
-            list($fileFlazz, $typeFileFlazz, $fileNameFlazz) = RegisterController::parseUriFile($request->fileFlazz, $request->name . "flazz");
+            list($fileFlazz, $typeFileFlazz, $fileNameFlazz) = RegisterController::parseUriFile($request->fileFlazz, $request->name . "flazz" . uniqid());
             
             try {
                 file_put_contents('storage/file/'. $fileNameFlazz . "." . $typeFileFlazz, $fileFlazz);
@@ -57,10 +57,10 @@ class RegisterController extends Controller
                 $responseMessage = "Error when save file";
             }
         } else {
-            list($fileId, $typeFileId, $fileNameId) = RegisterController::parseUriFile($request->fileId, $request->name . "id");
+            list($fileId, $typeFileId, $fileNameId) = RegisterController::parseUriFile($request->fileId, $request->name . "id". uniqid());
 
             try {
-                file_put_contents('storage/file/'. $fileId . "." . $typeFileId, $fileNameId);
+                file_put_contents('storage/file/'. $fileNameId . "." . $typeFileId, $fileId);
             } catch (\Throwable $th) {
                 $success = false;
                 $responseMessage = "Error when save file";

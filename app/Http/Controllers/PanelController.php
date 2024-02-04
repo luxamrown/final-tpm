@@ -9,6 +9,18 @@ use Laravel\Prompts\Output\ConsoleOutput;
 
 class PanelController extends Controller
 {
+    function parseUriFile($uri, $filename){
+        $file = $uri;
+
+        list($type, $file) = explode(';', $file);
+        list(, $file)      = explode(',', $file);
+        $fileType = explode("/", $type);
+
+        $file = base64_decode($file);
+
+        return array($file, $fileType[1], $filename);
+    }
+
     public function getListTeam(){
         $success = true;
         $responseMessage = "Berhasil Mendapatkan List Tim"; 
@@ -73,6 +85,42 @@ class PanelController extends Controller
             $devMessage = "Team by Id not found";
         }
 
+        $groupData = Group::where('id', $group->group_id)->first();
+
+        if($request->fileCv){
+            list($fileCv, $typeFileCv, $fileNameCv) = PanelController::parseUriFile($request->fileCv, $groupData->name . "cv" . uniqid());
+            try {
+                file_put_contents('storage/file/'. $fileNameCv . "." . $typeFileCv, $fileCv);
+            } catch (\Throwable $th) {
+                $success = false;
+                $responseMessage = "Error when save file";
+            }
+        }
+
+        if($groupData->is_binusian){
+            if($request->fileFlazz){
+                list($fileFlazz, $typeFileFlazz, $fileNameFlazz) = PanelController::parseUriFile($request->fileFlazz, $groupData->name . "flazz" . uniqid());
+                
+                try {
+                    file_put_contents('storage/file/'. $fileNameFlazz . "." . $typeFileFlazz, $fileFlazz);
+                } catch (\Throwable $th) {
+                    $success = false;
+                    $responseMessage = "Error when save file";
+                }
+            }
+        } else {
+            if($request->fileId){
+                list($fileId, $typeFileId, $fileNameId) = PanelController::parseUriFile($request->fileId, $groupData->name . "id" . uniqid());
+    
+                try {
+                    file_put_contents('storage/file/'. $fileNameId . "." . $typeFileId, $fileId);
+                } catch (\Throwable $th) {
+                    $success = false;
+                    $responseMessage = "Error when save file";
+                }
+            }
+        }
+
         if($success){
             $group -> update([
                 'fullname'=> $request->fullname,
@@ -82,6 +130,9 @@ class PanelController extends Controller
                 'github'=> $request->github,
                 'birthplace'=> $request->birthplace,
                 'birthdate'=> $request->birthdate,
+                'cv_file'=> $request->fileCv ? $fileNameCv . "." . $typeFileCv : $group->cv_file,
+                'flazz_file' => $request->fileFlazz ? ($groupData->is_binusian ? $fileNameFlazz . "." . $typeFileFlazz : "") : $group->flazz_file,
+                'idcard_file' => $request->fileId ? ($groupData->is_binusian ? "" : $fileNameId . "." . $typeFileId) : $group->idcard_file,
             ]);
         }
         
