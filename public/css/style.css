@@ -101,6 +101,7 @@
     .moving-image2 {
         position: absolute;
         animation: moveLeft2 15s linear infinite;
+        overflow: hidden;
     }
 
     @keyframes moveLeft1 {
