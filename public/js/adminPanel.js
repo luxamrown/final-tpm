@@ -46,7 +46,7 @@ else {
         }
 
         // Fetch participants data and set the table data
-        const fetchAllParticipantsData = async (searched, isSortedButtonClicked) => {
+        const fetchAllParticipantsData = async (searched, isSortedButtonClicked, isFilterButtonClicked) => {
             let participants = (await getAllParticipantsData()).data;   
   
             if (searched.length > 0) {
@@ -66,6 +66,14 @@ else {
                         return -1;
                     }
                 });
+            }
+
+            if (isFilterButtonClicked) {
+                participants = participants.filter((p) => {
+                    return (
+                        p.groupData.is_binusian === 1
+                    )
+                })
             }
 
             const tableData = participants.map((p, idx) => {
@@ -451,22 +459,35 @@ else {
         }
 
         let isSortButtonClicked = false;
+        let isFilterButtonClicked = false;
+
         document.getElementById("button-sort").addEventListener("click", () => {
             if (isSortButtonClicked) {
-                fetchAllParticipantsData("", false);
+                fetchAllParticipantsData("", false, isFilterButtonClicked);
                 isSortButtonClicked = false;
             }
             else {
-                fetchAllParticipantsData("", true);
+                fetchAllParticipantsData("", true, isFilterButtonClicked);
                 isSortButtonClicked = true;
             }
            
         });
 
+        document.getElementById("filter-binusian").addEventListener("change", () => {
+            if (document.getElementById("filter-binusian").checked) {
+                isFilterButtonClicked = true;
+            }
+            else {
+                isFilterButtonClicked = false;
+            }
+
+            fetchAllParticipantsData("", isSortButtonClicked, isFilterButtonClicked);
+        });
+
         document.getElementById("search-bar").addEventListener("keyup", () => {
-            fetchAllParticipantsData(document.getElementById("search-bar").value, isSortButtonClicked);
+            fetchAllParticipantsData(document.getElementById("search-bar").value, isSortButtonClicked, isFilterButtonClicked);
         })
 
-        fetchAllParticipantsData("", false);
+        fetchAllParticipantsData("", false, false);
     }
 }

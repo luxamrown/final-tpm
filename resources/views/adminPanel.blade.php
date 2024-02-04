@@ -68,7 +68,23 @@
                     />                     
                 </section>
 
+                <details class = "main__left__header__button" id = "button-filter">
+                    <summary>
+                        Filter
+                        <img
+                            src = "{{asset('img/icon-filter.png')}}"
+                        />                        
+                    </summary>
+                    <section class = "main__left__header__checkbox__container">
+                        <input
+                            type = "checkbox"
+                            value = "is-binusian"
+                            id = "filter-binusian"
+                        />
+                        <label for = "filter-binusian"> Binusian </label>                        
+                    </section>
 
+                </details>
 
                 <button class = "main__left__header__button" id = "button-sort">
                     Sort
