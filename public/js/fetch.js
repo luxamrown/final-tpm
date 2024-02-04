@@ -1,18 +1,46 @@
-document.getElementById("form-contact").addEventListener("click", async (event) => {
-    event.prevent.default();
+const namaUser = document.getElementById('inputName');
+const subject = document.getElementById('inputSubject');
+const email = document.getElementById('inputEmail');
+const message = document.getElementById('inputMessage');
 
-    const response = await fetch(url, {
+const nameUser = document.getElementById('userName');
+const emailUser = document.getElementById('userEmail');
+const subjectUser = document.getElementById('userSubject');
+const questionUser = document.getElementById('userQuestion');
+
+document.getElementById("form-contact").addEventListener("submit", async (event) => {
+    event.preventDefault();
+    console.log("test");
+    const response = await fetch('/send-mail',{
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          "name": "",
-          "subject": "",
-          "e_mail_address": "",
-          "message": ""
+          name: namaUser.value,
+          subject: subject.value,
+          e_mail_address: email.value,
+          message: message.value
         })
     });
-    
+
+});
+
+document.getElementById("form-question").addEventListener("submit", async (event) => {
+    event.preventDefault();
+    console.log("test");
+    const response = await fetch('/send-mail',{
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          name: nameUser.value,
+          e_mail_address: emailUser.value,
+          subject: subjectUser.value,
+          message: questionUser.value
+        })
+    });
+
 });
 

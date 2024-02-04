@@ -1,0 +1,281 @@
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    background: linear-gradient(180deg, #FFF 0%, #BC87FF 27.26%, #2F0CBD 74.13%, #0D0043 100%);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+    font-family: Poppins;
+}
+
+h1 {
+    color: #000;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    letter-spacing: 6px;
+    font-size: 52px;
+    margin-bottom: 0;
+    margin-top: 1rem;
+}
+
+.progress__bar__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.progress__bar__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    width: 30%;
+    position: relative;
+}
+
+.progress__bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #39219D;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #FFFFFF;
+    color: #39219D;
+    transition: all 0.3s ease;
+    padding: 0.75rem;
+}
+
+.progress__bar__active {
+    background-color: #39219D;
+    color: #fff;
+}
+
+.progress__bar__list li:before {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 2px;
+    background-color: #39219D;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.progress__bar__list li:first-child:before {
+    display: none;
+}
+
+.registration__form {
+    background: #FFF;
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    padding: 2rem;
+    border-radius: 10px;
+    filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+}
+
+.registration__form__category {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration__form__category__section {
+    text-align: center;
+    font-weight: 600;    
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1rem;
+}
+
+#category-group {
+    background: #39219D;
+    color: #FFFFFF;
+    border: 1px solid #39219D;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+
+#category-leader {
+    background: #FFFFFF;
+    color: black;
+    border: 1px solid #39219D;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.registration__form__grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    padding: 0;
+}
+
+.registration__form__grid__item {
+    width: 100%;
+}
+
+.registration__form__input__section {
+    padding-left: 1rem;
+    padding-right: 2rem;
+}
+
+.registration__form__label {
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.registration__form__input {
+    width: 100%;
+    margin-top: 0;
+    padding: 0.5rem;
+}
+
+.registration__form__input__file {
+    display: none;
+}
+
+.registration__form__input__file__header {
+    display: flex;
+    flex-directon: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.registration__form__input__file__header__inner {
+    width: 50%;
+}
+
+.registration__form__input__file__header__inner .registration__form__label {
+    margin-bottom: 1rem;
+}
+
+.registration__form__add__file {
+    margin: 0;
+    border-radius: 100%;
+    border: 1px solid black;
+    float: right;
+}
+
+.registration__form__drag_and_drop {
+    background: #F1F1F1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px dashed black;
+}
+
+.registration__form__drag_and_drop__title {
+    color: #AEAEAE;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.registration__form__drag_and_drop__subtitle {
+    color: #AEAEAE;
+    margin-top: 0;
+    text-align: center;
+}
+
+.registration__form__input__radio  {
+    margin-left: 0;
+}
+
+.registration__form__label__radio {
+    margin-right: 3rem;
+}
+
+.registration__form__button {
+    background: linear-gradient(90deg, rgba(47, 12, 189, 0.90) 0%, rgba(13, 0, 67, 0.90) 100%);
+    width: 75%;     
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 20px;
+    color: #F0F0F0;
+}
+
+.registration__form__button:hover {
+    transform: scale(1.05);
+}
+
+.registration__form__error {
+    color: red;
+    font-size: 12px;
+    margin-top: 0;
+    display: none;
+}
+
+#step-1 {
+    display: block;
+}
+
+#step-2 {
+    display: none;
+}
+
+#step-3 {
+    display: none;
+}
+
+#step-3-binusian {
+    display: none;
+}
+
+#step-3-non-binusian {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    .progress__bar__container {
+        width: 100%;
+    }
+
+    .progress__bar__list {
+        width: 50%;
+    }
+
+    .registration__form {
+        width: 80%;
+    }
+
+    .registration__form__grid {
+        flex-direction: column;
+    }
+
+    .registration__form__grid__item {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+}

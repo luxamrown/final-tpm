@@ -1119,11 +1119,13 @@
         <p class="poppins-light emailText" style="color: white; font-size: 24px; position:absolute; bottom: -357%; left: 49.7%; z-index: 2;">Email us anytime</p>
         <p class="poppins-bold callText" style="color: white; letter-spacing: 3px; font-size: 30px; position:absolute; bottom: -359.3%; left: 44.3%; z-index: 2;">Or call - 081 234 5678</p>
 
-        <input type="text"  name="name" class="contactForm nameForm" style="position: absolute; bottom: -362.5%; left: 30%; padding-left: 20px;" placeholder="Name">
-        <input type="text"  name="email" class="contactForm emailForm" style="position: absolute; bottom: -362.5%; left: 59.5%; padding-left: 20px;" placeholder="Email address">
-        <input type="text"  name="subject" class="contactForm subjectForm" style="width: 810px; position:absolute; bottom: -366.5%; left: 30%; padding-left: 20px;" placeholder="Subject">
-        <textarea name="question" class="contactForm questionForm" style="width: 810px; height:150px; position:absolute; bottom: -376%; left: 30%; padding-left: 20px; padding-bottom: 100px; box-sizing:border-box" placeholder="Ask a question"></textarea>
-        <button class="poppins submitButton" type="submit" style="position:absolute; bottom: -379.5%; right: 13.7%; width: 140px; height: 45px; border-radius: 30px; background-color: #87FFF8; border: none; font-size: 20px; padding: 0px 5px 0px 5px;">Submit</button>
+        <form id="form-question">
+            <input type="text" id="userName" name="name" class="contactForm nameForm" style="position: absolute; bottom: -362.5%; left: 30%; padding-left: 20px;" placeholder="Name">
+            <input type="text" id="userEmail" name="email" class="contactForm emailForm" style="position: absolute; bottom: -362.5%; left: 59.5%; padding-left: 20px;" placeholder="Email address">
+            <input type="text" id="userSubject" name="subject" class="contactForm subjectForm" style="width: 810px; position:absolute; bottom: -366.5%; left: 30%; padding-left: 20px;" placeholder="Subject">
+            <textarea name="question" id="userQuestion" class="contactForm questionForm" style="width: 810px; height:150px; position:absolute; bottom: -376%; left: 30%; padding-left: 20px; padding-bottom: 100px; box-sizing:border-box" placeholder="Ask a question"></textarea>
+            <button class="poppins submitButton" type="submit" style="position:absolute; bottom: -379.5%; right: 13.7%; width: 140px; height: 45px; border-radius: 30px; background-color: #87FFF8; border: none; font-size: 20px; padding: 0px 5px 0px 5px;">Submit</button>
+        </form>
 
         <img src="{{asset('frames/TIMELINE.png')}}" id="timelineTarget" style="width: 653px; height: 90px; position:absolute; bottom: -396%; left: 29%; z-index: 1;">
         <img src="{{asset('frames/codeTag3.png')}}" style="width: 601px; height: 440px; position:absolute; left: 0%; bottom: -423%;">
@@ -1239,20 +1241,20 @@
             <input type="text" id="inputSubject" class="getInTouch" name="subject" placeholder="Subject" style="bottom: -789%; left: 17%;">
             <input type="text" id="inputEmail" class="getInTouch" name="email" placeholder="E-mail Address" style="bottom: -795%; left: 17%;">
             <textarea type="text" id="inputMessage" class="getInTouch" name="message" placeholder="Message" style="bottom: -808.7%; left: 17%;"></textarea>
+            <img src="{{asset('frames/Line 12.png')}}" id="nameLine" style="width: 304px; position:absolute; bottom: -783.8%; left: 17%; z-index: 1;">
+            <img src="{{asset('frames/Line 12.png')}}" id="subjectLine" style="width: 304px; position:absolute; bottom: -789.8%; left: 17%; z-index: 1;">
+            <img src="{{asset('frames/Line 12.png')}}" id="emailLine" style="width: 304px; position:absolute; bottom: -795.8%; left: 17%; z-index: 1;">
+            <img src="{{asset('frames/Line 12.png')}}" id="messageLine" style="width: 304px; position:absolute; bottom: -809.8%; left: 17%; z-index: 1;">
+            <img src="{{asset('frames/image 90.png')}}" style="position: absolute; bottom: -814%; left: 41.4%; z-index: 1; width:740px; height: 665px;">
+            <img src="{{asset('frames/locator 1.png')}}" style="position: absolute; bottom: -800%; left: 57.5%; z-index: 1; width: 61px;">
+            <img src="{{asset('frames/Rectangle 2462.png')}}" style="position: absolute; bottom: -800%; left: 62.5%; z-index: 1; width: 247px; height: 105px;">
+            <p class="poppins" id="locatorDesc" style="position: absolute; bottom: -799.5%; z-index:1; left: 65.5%; width: 163px; font-size:16px; line-height:24px; color:black;">Lorem ipsum dolor<br>sit amet<br>consectetur</p>
+
+            <button type="submit" id="sendButton" class="poppins" style="position: absolute; bottom: -815%; left: 18%; width: 269px; height: 55px; padding: 14px 68px 14px 68px; background-color: white; border:none; outline:none; letter-spacing: 1px; font-size: 18px; z-index: 1;">
+                <p style="width: 200px; height: 27px; position:absolute; left: 13%; bottom: 0%;">Send Message</p>
+            </button>
         </form>
 
-        <img src="{{asset('frames/Line 12.png')}}" id="nameLine" style="width: 304px; position:absolute; bottom: -783.8%; left: 17%; z-index: 1;">
-        <img src="{{asset('frames/Line 12.png')}}" id="subjectLine" style="width: 304px; position:absolute; bottom: -789.8%; left: 17%; z-index: 1;">
-        <img src="{{asset('frames/Line 12.png')}}" id="emailLine" style="width: 304px; position:absolute; bottom: -795.8%; left: 17%; z-index: 1;">
-        <img src="{{asset('frames/Line 12.png')}}" id="messageLine" style="width: 304px; position:absolute; bottom: -809.8%; left: 17%; z-index: 1;">
-        <img src="{{asset('frames/image 90.png')}}" style="position: absolute; bottom: -814%; left: 41.4%; z-index: 1; width:740px; height: 665px;">
-        <img src="{{asset('frames/locator 1.png')}}" style="position: absolute; bottom: -800%; left: 57.5%; z-index: 1; width: 61px;">
-        <img src="{{asset('frames/Rectangle 2462.png')}}" style="position: absolute; bottom: -800%; left: 62.5%; z-index: 1; width: 247px; height: 105px;">
-        <p class="poppins" id="locatorDesc" style="position: absolute; bottom: -799.5%; z-index:1; left: 65.5%; width: 163px; font-size:16px; line-height:24px; color:black;">Lorem ipsum dolor<br>sit amet<br>consectetur</p>
-
-        <button type="submit" id="sendButton" class="poppins" style="position: absolute; bottom: -815%; left: 18%; width: 269px; height: 55px; padding: 14px 68px 14px 68px; background-color: white; border:none; outline:none; letter-spacing: 1px; font-size: 18px; z-index: 1;">
-            <p style="width: 200px; height: 27px; position:absolute; left: 13%; bottom: 0%;">Send Message</p>
-        </button>
 
     <footer>
         <img src="{{asset('frames/Rectangle 2463.png')}}" style="position: absolute; bottom: -837%; width: 100%;">
