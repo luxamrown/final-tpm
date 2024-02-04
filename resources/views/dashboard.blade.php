@@ -1223,7 +1223,7 @@
             Pharetra et et tortor felis vestibulum donec sagittis ac.
         </p>
         <button class="poppins eventButton" id="eventButton1" style="left: 60%">Visit Website</button>
-        <button class="poppins eventButton" id="eventButton2" style="left: 75%;">Register Here</button>
+        <a href="/register" class="poppins eventButton" id="eventButton2" style="left: 75%; text-decoration: none; text-align:center;">Register Here</a>
         <img src="{{asset('frames/web1.png')}}" style="position:absolute; bottom: -749.5%; left: 60.7%; width: 17px; z-index: 1;">
         <img src="{{asset('frames/web2.png')}}" style="position:absolute; bottom: -749.5%; left: 75.7%; width: 17px; z-index: 1;">
 
