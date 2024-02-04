@@ -31,6 +31,7 @@ else {
         const defaultContent = 
         `
             <img
+                id = "main-image"
                 src = "img/admin-panel.png"
             />
             <h1 class = "section__title"> View Or Edit Team Data Here! </h1>
@@ -45,9 +46,28 @@ else {
         }
 
         // Fetch participants data and set the table data
-        const fetchAllParticipantsData = async () => {
-            const participants = (await getAllParticipantsData()).data;   
-            console.log(participants); 
+        const fetchAllParticipantsData = async (searched, isSortedButtonClicked) => {
+            let participants = (await getAllParticipantsData()).data;   
+  
+            if (searched.length > 0) {
+                participants = participants.filter((p) => {
+                    return (
+                        p.groupData.name.includes(searched) 
+                    );
+                });
+            }
+
+            if (isSortedButtonClicked) {
+                participants = participants.sort((a, b) => {
+                    if (a.groupData.name.toLowerCase() > b.groupData.name.toLowerCase()) {
+                        return 1;
+                    }
+                    else {
+                        return -1;
+                    }
+                });
+            }
+
             const tableData = participants.map((p, idx) => {
                 return (   
                     `<tr key = "${idx}">
@@ -126,8 +146,6 @@ else {
         // View data
         const viewData = async (buttonId, teamName) => {
             const data = await getParticipantDataById(buttonId.split("-")[1]);
-
-            console.log(data);
         
             const viewContent = 
             `   <section class = "view_data">
@@ -173,12 +191,12 @@ else {
 
                     <section class = "view_data__information__container">
                         <h3> CV </h3>
-                        <h3 class = "view_data__information"> ${data.birthdate} </h3>               
+                        <h3 class = "view_data__information" id = "view-cv-file"> ${data.cv_file} </h3>               
                     </section>
                     
                     <section class = "view_data__information__container">
                         <h3> ID Card </h3>
-                        <h3 class = "view_data__information"> ${data.birthdate} </h3>               
+                        <h3 class = "view_data__information" id = "view-id-file"> ${data.idcard_file.length === 0 ? data.flazz_file : data.idcard_file} </h3>               
                     </section> 
                     
                     <button class = "table__button view_data__button_close" id = "view-close-button">
@@ -191,12 +209,22 @@ else {
             document.getElementById("view-close-button").addEventListener("click", () => {
                 document.getElementById("panel").innerHTML = defaultContent;
             });
+
+            document.getElementById("view-cv-file").addEventListener("click", () => {
+                window.open(`/storage/file/${data.cv_file}`);
+            });
+
+            document.getElementById("view-id-file").addEventListener("click", () => {
+                window.open(`/storage/file/${data.idcard_file.length === 0 ? data.flazz_file : data.idcard_file}`);
+            });
         }
 
         // Edit data
         const editData = async (buttonId, teamName) => {
             const data = await getParticipantDataById(buttonId.split("-")[1]);
-        
+
+            const birthDate = data.birthdate.split("-");
+
             const editContent = 
             `   <form class = "view_data">
                     <header class = "view_data__header">
@@ -270,7 +298,13 @@ else {
                         <input
                             class = "view_data__input"
                             id = "edit-birth-date"
-                            value = ${data.birthdate.split("-")[0].length === 4 ? data.birthdate : data.birthdate.split("-")[2] + "-" + + data.birthdate.split("-")[1] + "-" + data.birthdate.split("-")[0]}
+                            value = ${
+                                    birthDate[0].length === 4
+                                    ?
+                                        data.birthdate
+                                    : 
+                                        birthDate[2] + "-" + birthDate[1] + "-" + birthDate[0]
+                                }
                             type = "date"
                             required
                         />               
@@ -288,7 +322,7 @@ else {
                     
                     <section class = "view_data__information__container">
                         <h3> ID Card </h3>
-                        <h2 class = "view_data__information view_data__input" id = "edit-id-card-name" style = "cursor:pointer;"> ${data.is_binusian ? data.flazz_file : data.idcard_file} </h2>
+                        <h2 class = "view_data__information view_data__input" id = "edit-id-card-name" style = "cursor:pointer;"> ${data.flazz_file.length === 0 ? data.idcard_file : data.flazz_file} </h2>
                         <input
                             id = "edit-id-card"
                             style = "display:none;"
@@ -416,6 +450,23 @@ else {
 
         }
 
-        fetchAllParticipantsData();
+        let isSortButtonClicked = false;
+        document.getElementById("button-sort").addEventListener("click", () => {
+            if (isSortButtonClicked) {
+                fetchAllParticipantsData("", false);
+                isSortButtonClicked = false;
+            }
+            else {
+                fetchAllParticipantsData("", true);
+                isSortButtonClicked = true;
+            }
+           
+        });
+
+        document.getElementById("search-bar").addEventListener("keyup", () => {
+            fetchAllParticipantsData(document.getElementById("search-bar").value, isSortButtonClicked);
+        })
+
+        fetchAllParticipantsData("", false);
     }
 }

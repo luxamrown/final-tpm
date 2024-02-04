@@ -53,7 +53,31 @@
 
     <main class = "main">
         <section class = "main__left">
-            <h3> Participants </h3>
+            <header class = "main__left__header">
+                <h3> Participants </h3>
+
+                <section class = "main__left__header__input__container">
+                    <img
+                        src = "{{asset('img/icon-search.png')}}"
+                    />
+                    <input
+                        class = "main__left__header__input"
+                        type = "text"
+                        id = "search-bar"
+                        placeholder = "Search for teams..."
+                    />                     
+                </section>
+
+
+
+                <button class = "main__left__header__button" id = "button-sort">
+                    Sort
+                    <img
+                        src = "{{asset('img/icon-sort.png')}}"
+                    />
+                </button>
+            </header>
+            
 
             <section class = "table__container">
                 <table class = "table">
