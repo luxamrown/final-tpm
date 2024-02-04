@@ -24,6 +24,7 @@ document.getElementById("form-contact").addEventListener("submit", async (event)
         })
     });
 
+    alert(`Halo ${namaUser.value} Email sudah terkirim! Terima kasih`)
 });
 
 document.getElementById("form-question").addEventListener("submit", async (event) => {
@@ -42,5 +43,6 @@ document.getElementById("form-question").addEventListener("submit", async (event
         })
     });
 
+    alert(`Halo ${nameUser.value} Email sudah terkirim! Terima kasih`)
 });
 
