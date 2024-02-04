@@ -15,6 +15,15 @@ Tech: Laravel
 username: admin <br>
 password: admin123
 
+## Preview (Limited Feature)
+#### https://final-tpm.vercel.app/
+
+username: admin <br>
+password: admin123
+
+username: BNCC <br>
+password: BNcc1234
+
 ## Contributors ✨
 
 <table>
@@ -28,9 +37,9 @@ password: admin123
         </td>
         <td align="center" valign="top" width="14.28%"><a href="https://github.com/DavinTanaya"><img src="https://avatars.githubusercontent.com/u/146054563?v=4?s=100" width="100px;" alt="Davin"/><br /><sub><b>Davin (BE)</b></sub></a>
         </td>
-        <td align="center" valign="top" width="14.28%"><a href=""><img src="https://avatars.githubusercontent.com/u/125367394?v=4?s=100" width="100px;" alt="Davin"/><br /><sub><b>Jacqueline (UI/UX)</b></sub>
+        <td align="center" valign="top" width="14.28%"><a href="#"><img src="https://avatars.githubusercontent.com/u/125367394?v=4?s=100" width="100px;" alt="Davin"/><br /><sub><b>Jacqueline (UI/UX)</b></sub>
         </td>
-        <td align="center" valign="top" width="14.28%"><a href=""><img src="https://avatars.githubusercontent.com/u/146054563?v=4?s=100" width="100px;" alt="Davin"/><br /><sub><b>Vallerie (UI/UX)</b></sub>
+        <td align="center" valign="top" width="14.28%"><a href="#"><img src="https://avatars.githubusercontent.com/u/146054563?v=4?s=100" width="100px;" alt="Davin"/><br /><sub><b>Vallerie (UI/UX)</b></sub>
         </td>
         <td align="center" valign="top" width="14.28%"><a href="https://github.com/luxamrown"><img src="https://avatars.githubusercontent.com/u/63460549?v=4?s=100" width="100px;" alt="Abror"/><br /><sub><b>Abror (BE)</b></sub></a>
         </td>
