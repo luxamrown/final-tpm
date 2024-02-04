@@ -17,7 +17,7 @@ password: admin123
 
 ## Preview (Limited Feature)
 
-#### <a href="https://final-tpm.vercel.app/">https://final-tpm.vercel.app/</a>
+#### <a target="_blank" href="https://final-tpm.vercel.app/">https://final-tpm.vercel.app/</a>
 
 username: admin <br>
 password: admin123
