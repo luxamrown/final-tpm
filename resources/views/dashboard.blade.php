@@ -1260,13 +1260,13 @@
         <img src="{{asset('frames/Rectangle 2463.png')}}" style="position: absolute; bottom: -837%; width: 100%;">
 
         <p class="poppins-bold footer1row"  style="position: absolute; bottom: -828.3%; left: 6.5%; font-size: 16px; cursor: pointer; cursor: pointer;" id="homeButton">Home</p>
-        <p class="poppins-bold footer2row" style="position: absolute; bottom: -830%; left: 6.5%; font-size: 16px; cursor: pointer;" id="aboutButton">About</p>
+        <p class="poppins-bold footer2row" style="position: absolute; bottom: -830%; left: 6.5%; font-size: 16px; cursor: pointer;" id="aboutButton2">About</p>
 
-        <p class="poppins-bold footer1row" style="position: absolute; bottom: -828.3%; left: 19.5%; font-size: 16px; cursor: pointer;" id="championButton">Champion & Prizes</p>
-        <p class="poppins-bold footer2row" style="position: absolute; bottom: -830%; left: 19.5%; font-size: 16px; cursor: pointer;" id="faqButton">FAQ</p>
+        <p class="poppins-bold footer1row" style="position: absolute; bottom: -828.3%; left: 19.5%; font-size: 16px; cursor: pointer;" id="championButton2">Champion & Prizes</p>
+        <p class="poppins-bold footer2row" style="position: absolute; bottom: -830%; left: 19.5%; font-size: 16px; cursor: pointer;" id="faqButton2">FAQ</p>
 
-        <p class="poppins-bold footer1row" style="position: absolute; bottom: -828.3%; left: 39.5%; font-size: 16px; cursor: pointer;" id="timelineButton">Timeline</p>
-        <p class="poppins-bold footer2row" style="position: absolute; bottom: -830%; left: 39.5%; font-size: 16px; cursor: pointer;" id="mentorButton">Mentor & Jury</p>
+        <p class="poppins-bold footer1row" style="position: absolute; bottom: -828.3%; left: 39.5%; font-size: 16px; cursor: pointer;" id="timelineButton2">Timeline</p>
+        <p class="poppins-bold footer2row" style="position: absolute; bottom: -830%; left: 39.5%; font-size: 16px; cursor: pointer;" id="mentorButton2">Mentor & Jury</p>
 
         <p class="poppins-bold footerHacktech" style="position:absolute; bottom: -830.5%; left: 70.5%; font-size: 44px; color:black;">HACKTECH</p>
         <p class="poppins-bold footerHacktech" style="position:absolute; bottom: -830.5%; left: 89%; font-size: 44px; color:black; letter-spacing: -4.5px;"> < / > </p>
