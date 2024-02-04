@@ -95,6 +95,75 @@ html, body {
     border-radius: 8px;
 }
 
+.main__left__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.main__left__header__input__container {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 8px;
+    border: 2px solid rgba(217, 217, 217, 1);
+    margin-left: 2rem;
+}
+
+.main__left__header__input {
+    width: 100%;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border: 0;
+}
+
+.main__left__header__input:focus {
+    outline: none;
+}
+
+.main__left__header__button {
+    margin-left: 1rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;   
+}
+
+.main__left__header__button  {
+    background-color: rgba(217, 217, 217, 0.8);    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 8px;
+    border: none;
+    font-size: 12px;
+}
+
+.main__left__header__button summary {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.main__left__header__checkbox__container {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#button-sort img,
+#button-filter img {
+    width: 16px;
+    height: 16px;
+    margin-left: 0.25rem;
+}
+
+
 .section__title {
     color: #39219D;
     text-align: center;
@@ -186,15 +255,30 @@ html, body {
         order: 1;
         left: -5%;
         padding: 0;
+        height: 40vh;
     }
 
-    .margin__right img {
-        width: 25%;
+    .main__left__header__input__container {
+        margin-left: 1rem;
+    }
+
+    #button-sort,
+    #button-filter {
+        display: none;
+    }    
+
+    .main__left__header__input__container {
+        display: none;
+    }
+
+    #main-image {
+        display: none;
     }
 
     .table__container {
         width: 100%;
         position: static;
+        height: 35vh;
     }
 }
 
@@ -261,3 +345,8 @@ html, body {
     display: none;
 }
 
+#view-cv-file,
+#view-id-file {
+    text-decoration: underline;
+    cursor: pointer;
+}
