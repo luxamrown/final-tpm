@@ -1234,10 +1234,12 @@
         <img src="{{asset('frames/Rectangle 2459.png')}}" style="position: absolute; bottom: -818%; left: 12.5%;">
         <p class="poppins" id="contactUs" style="position:absolute; bottom: -780%; left: 17%; color:white; font-weight:bold; font-size: 36px; letter-spacing: 2px; z-index:1;">Contact Us</p>
 
-        <input type="text" id="inputName" class="getInTouch" name="nama" placeholder="Name" style="bottom: -783%; left: 17%;">
-        <input type="text" id="inputSubject" class="getInTouch" name="subject" placeholder="Subject" style="bottom: -789%; left: 17%;">
-        <input type="text" id="inputEmail" class="getInTouch" name="email" placeholder="E-mail Address" style="bottom: -795%; left: 17%;">
-        <textarea type="text" id="inputMessage" class="getInTouch" name="message" placeholder="Message" style="bottom: -808.7%; left: 17%;"></textarea>
+        <form id="form-contact">
+            <input type="text" id="inputName" class="getInTouch" name="nama" placeholder="Name" style="bottom: -783%; left: 17%;">
+            <input type="text" id="inputSubject" class="getInTouch" name="subject" placeholder="Subject" style="bottom: -789%; left: 17%;">
+            <input type="text" id="inputEmail" class="getInTouch" name="email" placeholder="E-mail Address" style="bottom: -795%; left: 17%;">
+            <textarea type="text" id="inputMessage" class="getInTouch" name="message" placeholder="Message" style="bottom: -808.7%; left: 17%;"></textarea>
+        </form>
 
         <img src="{{asset('frames/Line 12.png')}}" id="nameLine" style="width: 304px; position:absolute; bottom: -783.8%; left: 17%; z-index: 1;">
         <img src="{{asset('frames/Line 12.png')}}" id="subjectLine" style="width: 304px; position:absolute; bottom: -789.8%; left: 17%; z-index: 1;">
@@ -1273,9 +1275,9 @@
         <p class="poppins-light copyrights" style="position: absolute; bottom: -835.5%; right: 20.3%; font-size: 16px; font-weight:bold;">Privacy Policy 61.8</p>
         <p class="poppins-light copyrights" style="position: absolute; bottom: -835.5%; right: 6.3%; font-size: 16px; font-weight:bold;">Terms of Service</p>
 
-
     </footer>
     </div>
     <script src="{{asset('js/scroll.js')}}"></script>
+    <script src="{{asset('js/fetch.js')}}"></script>
 </body>
 </html>
