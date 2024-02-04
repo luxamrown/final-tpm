@@ -61,7 +61,7 @@
     footer p:hover {
         font-weight: 800;
         text-decoration: underline;
-    }        
+    }
 
     .faq {
         width: 1200px;
@@ -195,6 +195,23 @@
         resize: none;
     }
 
+    .juries-container {
+        position: absolute;
+        width: 900px;
+        height: 500px;
+        overflow: hidden;
+    }
+
+    .juries-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 0.5s ease-in-out;
+        opacity: 0;
+    }
+    .second-image {
+        opacity: 1 !important;
+    }
     .image-container1 {
         position: absolute;
         width: 100%;
@@ -277,6 +294,12 @@
         background-color: black;
         width: 100%;
         height: 2080px;
+    }
+    .hidden {
+        display: none;
+    }
+    .visible {
+        display: inline;
     }
 
     @media (min-width: 1920px) {
@@ -959,7 +982,10 @@
         <h1 class="poppins-bold" style="font-size: 130px; color: black; margin-left: 100px; letter-spacing: 10px;">2023</h1>
         <img src="{{asset('frames/image 2.png')}}" style="width: 830px; height: 550px; position: absolute; right: 5%; bottom: 61%; z-index: 1;">
         <img src="{{asset('frames/Ellipse 3.png')}}" style="position: absolute; left: 0%; width: 900px; height: 600px;">
-        <img src="{{asset('frames/Play button.png')}}" style="position: absolute; left: 23%; width: 165px; height: 167px; bottom: 70%;">
+
+        <img src="{{asset('frames/Play button.png')}}" id="playButton" class="visible" style="position: absolute; left: 23%; width: 165px; height: 167px; bottom: 70%;" onclick="togglePlayPause()">
+        <img src="{{asset('frames/pause.png')}}" id="pauseButton" class="hidden" style="position: absolute; left: 23%; width: 165px; height: 160px; bottom: 70%;" onclick="togglePlayPause()">
+
         <div class="poppins" style="position:absolute; left: 6%; bottom: 60%;">
             <h1 style="letter-spacing: 13px;  font-size: 70px; color:black;">Play <p style="margin-top: 17px;">Video</p></h1>
             <p class="smallFont poppins-light" style="margin-top: 30px; letter-spacing: 3px">VIDEO RECAP TECHNO</p>
@@ -1180,7 +1206,11 @@
         <img src="{{asset('frames/Rectangle 2440.png')}}" style="position: absolute; bottom: -582%; left: 4%; width: 1348px; height: 900px;">
         <p class="juriesText1" style="color: black; position:absolute; bottom: -548%; left: 33%; font-size:64px; font-weight:bold; letter-spacing: 4px;">Meet our <span style="color: #39219D">Juries</span></p>
         <p class="poppins juriesText2" style="position:absolute; bottom: -550%; left: 42%; font-size: 20px; font-weight: 100; letter-spacing: 1px;">Juries Technospace</p>
-        <img src="{{asset('frames/Juries (FIX).png')}}" style="position: absolute; bottom: -577%; z-index:1; left: 19%; width: 900px; height: 500px;">
+        <img src="{{asset('frames/Juries (FIX).png')}}" style="position: absolute; bottom: -577%; z-index:1; left: 19%; width: 900px; height: 500px; opacity: 1;">
+        <div class="juries-container">
+            <img src="{{asset('frames/JuriesR.png')}}" class="first-image" style="position: absolute; bottom: -577%; z-index:1; left: 19%; width: 900px; height: 500px;">
+            <img src="{{asset('frames/JuriesL.png')}}" class="third-image" style="position: absolute; bottom: -577%; z-index:1; left: 19%; width: 900px; height: 500px;">
+        </div>
 
         {{-- Sponsors --}}
         <div id="sponsorTarget" class="sponsorBackground" style="position: absolute; bottom: -705%">
