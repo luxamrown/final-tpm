@@ -57,6 +57,11 @@
             padding-bottom: 100px;
         }
 
+    li a:hover,
+    footer p:hover {
+        font-weight: 800;
+        text-decoration: underline;
+    }        
 
     .faq {
         width: 1200px;
@@ -688,6 +693,7 @@
         img[src="{{asset('frames/Ellipse 2.png')}}"] {
             left: 72%;
         }
+
 
         #htDay3 {
             bottom: -474.4% !important;
