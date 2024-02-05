@@ -195,11 +195,31 @@
         resize: none;
     }
 
-    .juries-container {
+    .juries-containerL {
         position: absolute;
-        width: 900px;
-        height: 500px;
-        overflow: hidden;
+        bottom: -496%;
+        width: 270px;
+        background-color: transparent;
+        height: 270px;
+        left: 15%;
+        z-index: 2;
+    }
+    .juries-containerM {
+        position: absolute;
+        bottom: -496%;
+        width: 270px;
+        height: 270px;
+        left: 37%;
+        z-index: 2;
+    }
+    .juries-containerR {
+        position: absolute;
+        bottom: -496%;
+        width: 270px;
+        background-color: transparent;
+        height: 270px;
+        left: 58%;
+        z-index: 1;
     }
 
     .juries-container img {
@@ -259,7 +279,7 @@
     }
     .visible-image {
         opacity: 1;
-        z-index: 1;
+        z-index: 0;
     }
     .hidden-image {
         opacity: 0;
@@ -268,6 +288,30 @@
     .image-container1:hover .hidden-image {
         opacity: 1;
         z-index: 1;
+    }
+    .juries-containerM:hover .hidden-image {
+        opacity: 1;
+        z-index: 1;
+    }
+    .juries-containerM:hover .visible-image {
+        opacity: 0;
+        z-index: 1;
+    }
+    .juries-containerR:hover .hidden-image {
+        opacity: 1;
+        z-index: 1;
+    }
+    .juries-containerR:hover .visible-image {
+        opacity: 0;
+        z-index: 1;
+    }
+    .juries-containerL:hover .hidden-image {
+        opacity: 1;
+        z-index: 3;
+    }
+    .juries-containerL:hover .visible-image {
+        opacity: 0;
+        z-index: 3;
     }
     .image-container1:hover .visible-image {
         opacity: 0;
@@ -1206,10 +1250,17 @@
         <img src="{{asset('frames/Rectangle 2440.png')}}" style="position: absolute; bottom: -582%; left: 4%; width: 1348px; height: 900px;">
         <p class="juriesText1" style="color: black; position:absolute; bottom: -548%; left: 33%; font-size:64px; font-weight:bold; letter-spacing: 4px;">Meet our <span style="color: #39219D">Juries</span></p>
         <p class="poppins juriesText2" style="position:absolute; bottom: -550%; left: 42%; font-size: 20px; font-weight: 100; letter-spacing: 1px;">Juries Technospace</p>
-        <img src="{{asset('frames/Juries (FIX).png')}}" style="position: absolute; bottom: -577%; z-index:1; left: 19%; width: 900px; height: 500px; opacity: 1;">
-        <div class="juries-container">
-            <img src="{{asset('frames/JuriesR.png')}}" class="first-image" style="position: absolute; bottom: -577%; z-index:1; left: 19%; width: 900px; height: 500px;">
-            <img src="{{asset('frames/JuriesL.png')}}" class="third-image" style="position: absolute; bottom: -577%; z-index:1; left: 19%; width: 900px; height: 500px;">
+        <div class="juries-containerM">
+            <img src="{{asset('frames/Frame 40176.png')}}" class="hidden-image" style="position: absolute; bottom: -577%; left: 35%; width: 380px; height: 500px;">
+            <img src="{{asset('frames/Photo.png')}}" class="visible-image" style="position: absolute; bottom: -577%; left: 19%; width: 267px; height: 420px;">
+        </div>
+        <div class="juries-containerR">
+            <img src="{{asset('frames/PhotoR.png')}}" class="visible-image" style="position: absolute; bottom: -577%; left: 19%; width: 267px; height: 420px;">
+            <img src="{{asset('frames/Frame 40176.png')}}" class="hidden-image" style="position: absolute; bottom: -577%; left: 25%; width: 380px; height: 500px;">
+        </div>
+        <div class="juries-containerL">
+            <img src="{{asset('frames/Photo.png')}}" class="visible-image" style="position: absolute; bottom: -577%; left: 19%; width: 267px; height: 420px;">
+            <img src="{{asset('frames/Frame 40176.png')}}" class="hidden-image" style="position: absolute; bottom: -577%; left: 35%; width: 380px; height: 500px;">
         </div>
 
         {{-- Sponsors --}}
